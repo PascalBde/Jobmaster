@@ -1,0 +1,279 @@
+:root {
+    --maintextcolor: #000000;
+    background-color: #080142;
+}
+
+#app {
+    background-color: #080142;
+}
+
+.SelectfieldMonthStart, .SelectfieldYearStart  {
+    border-style: solid;
+    border-color: seagreen;
+    border-radius: 10px;
+}
+
+.SelectfieldMonthEnd, .SelectfieldYearEnd {
+    border-style: solid;
+    border-color: rgba(255, 0, 0, 0.717);
+    border-radius: 10px;
+}
+
+.maritalStatus {
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-color: skyblue !important;
+}
+
+.monthSelect, .yearSelect {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0.25rem;
+}
+
+.inputCompany {
+    width: 462.5px;
+    height: 50px;
+    margin-top: 10rem;
+    margin-left: -29rem;
+}
+
+.inputPosition {
+    width: 462.5px;
+    height: 50px;
+    margin-left: -29rem;
+}
+
+.inputTextfieldLabel {
+    font-size: 20px;
+    text-decoration: underline;
+    width: auto;
+    max-width: 75px;
+    padding-left: 0.5rem;
+    margin-left: -18rem;
+    font-weight: bold;
+}
+
+.inputTextfieldLabelJob {
+    font-size: 20px;
+    text-decoration: underline;
+    width: auto;
+    max-width: 75px;
+    padding-left: 0.5rem;
+    margin-left: -16rem;
+    font-weight: bold;
+}
+
+.addVitaEntryButton {
+    display: block;
+    font-size: 24px;
+    height: 50px;
+    width: auto;
+    margin-top: 19rem;
+    border-style: solid;
+    border-width: thick;
+    border-color: darkgreen;
+    background-color: mediumseagreen;
+    text-align: center;
+    font-weight: bold;
+}
+
+.entryDeleteButton {
+    color: red;
+    height: 30px;
+    width: 30px;
+    margin-left: 1275px;
+    position: absolute;
+    margin-top: 40px;    
+}
+
+.entryDates {
+    margin-left: 10px;
+}
+
+.positionEntry {
+    margin-left: 35px;
+    font-size: 32px;
+}
+
+.companyEntry {
+    margin-left: 262px;
+    font-size: 32px;
+    
+}
+
+.entryObject {
+    margin-left: 500px;
+    font-size: 28px;
+    background-color: skyblue;
+    width: 750px;
+    list-style: none;
+    border-style: solid;
+    border-color: steelblue;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.line {
+    display: flex;
+    position: static;
+    border: none;
+    height: 3px;
+    background: silver;
+    margin-top: 1rem;
+}
+
+.final-line {
+    display: flex;
+    position: static;
+    border: none;
+    height: 3px;
+    background: silver;
+    margin-top: 2rem;
+}
+
+.button {
+    background-color: rgb(64, 55, 235);
+    border-color: skyblue;
+    color: skyblue;
+    border-radius: 5px;
+    width: 50px;
+    height: 40px;
+}
+
+.userInfo {
+    font-size: 24px;
+    display: block;
+    position: fixed;
+    background-color: skyblue;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.employerDetails {
+    display: block;
+    position: fixed;
+    background-color: skyblue;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 30rem;
+}
+
+.employerDetailsList {
+    list-style: none;
+    margin-left: -30px;
+    margin-right: 10px;
+    margin-bottom: -10px;
+}
+
+
+.employerform {
+    display: block;
+    position: fixed;
+    background-color: skyblue;
+    width: 450px;
+    height: auto;
+    font-weight: bold;
+    margin-left: 32.5rem;
+    margin-top: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.outputLetterText {
+    white-space: pre-line;
+}
+
+.jobInfo { 
+    width: auto;
+    max-width: 750px;
+    height: auto;
+}
+
+.jobInfoLabel {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+}
+
+.employerHeader {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.userHeader {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.userDetails {
+    list-style: none;
+    margin-left: -30px;
+    margin-right: 10px;
+    margin-bottom: -10px;
+}
+
+.cl-form {
+    display: inline-flex;
+    position: relative;
+    grid-row: auto;
+    background-color: snow;
+    width: auto;
+    max-width: 1920px;
+    height: auto;
+    list-style: none;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.vita-form {
+    display: inline-flex;
+    position: relative;
+    grid-row: auto;
+    background-color: snow;
+}
+
+.container {
+    max-width: 100% !important; 
+}
+
+.navImg {
+    color: skyblue !important;
+    margin-top: 0.45rem !important;
+    margin-right: 0.5rem !important;
+}
+
+.userDataSubmit {
+    display: block;
+    border-style: solid !important;
+    border-width: thick !important;
+    background-color: rgb(64, 55, 235);
+    border-color: skyblue;
+    color: skyblue;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 260px;
+    height: 50px;
+}
+
+.userDateSave {
+    display: inline-block;
+    color: skyblue;
+    width: 40px;
+    height: 40px;
+}

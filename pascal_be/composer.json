@@ -1,0 +1,8 @@
+{
+  "require": {
+    "slim/slim": "^3.0",
+	"tecnickcom/tcpdf" : "*",
+    "firebase/php-jwt": "^5.0"
+  },
+  "minimum-stability": "stable"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "jobmaster",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^21.0.0",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
+    "date-fns": "^2.15.0",
+    "file-dialog": "0.0.7",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
+    "rc-upload": "^3.3.1",
+    "react": "^16.13.1",
+    "react-accessible-accordion": "^3.0.1",
+    "react-bootstrap": "^1.0.1",
+    "react-datepicker": "^1.8.0",
+    "react-datetime": "^2.16.3",
+    "react-dom": "^16.13.1",
+    "react-feather": "^2.0.8",
+    "react-flip-move": "^3.0.4",
+    "react-moment": "^0.9.7",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-select": "^3.1.0",
+    "react-tabs": "^3.1.1",
+    "react-toastify": "^6.0.8",
+    "save-file": "^2.3.1",
+    "semantic-ui-react": "^2.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "electron": "electron . --disable-gpu",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "build:win": "electron-packager ./ --app-version=1.0 --app-copyright=PascalBurg  --arch=ia32 --platform=win32 --asar --ignore=.idea --out=electronBuild/ --overwrite=true  --build-version=1.0 --app-bundle-id=Marvelator",
+    "build:linux": "electron-packager ./ --app-version=1.0 --app-copyright=PascalBurg  --arch=x64 --platform=linux --ignore=.idea --out=electronBuild/ --overwrite=true --build-version=1.0 --app-bundle-id=Marvelator"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^6.1.12",
+    "electron-packager": "^15.0.0"
+  }
+}
