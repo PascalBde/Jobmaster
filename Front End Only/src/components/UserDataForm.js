@@ -345,7 +345,7 @@ class UserDataForm extends Component {
                                                                 onChange={(value)=>{
                                                                 this.props.onUpdate('userNationality', value);
                                                                 }}
-                                                                placeholder="Bitte wählen"
+                                                                placeholder=""
                                                             />
                                                         </div>
                                                     </div>
@@ -424,7 +424,7 @@ class UserDataForm extends Component {
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userMaritalStatus', value);
                                                             }}
-                                                            placeholder="Bitte wählen"
+                                                            placeholder=""
                                                         />
                                                     </div>
                                                 </div>
@@ -452,7 +452,7 @@ class UserDataForm extends Component {
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userPersonalSkillName', value);
                                                             }}
-                                                            placeholder="Bitte wählen"
+                                                            placeholder=""
                                                         />
                                                     </div>
                                                 </div>
@@ -571,7 +571,7 @@ class UserDataForm extends Component {
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userProfessionalSkillName', value);
                                                             }}
-                                                            placeholder="Bitte wählen"
+                                                            placeholder=""
                                                         />
                                                     </div>
                                                 </div>
