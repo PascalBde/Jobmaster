@@ -169,7 +169,7 @@ class UserDataForm extends Component {
     }
 
     render() {
-        const userFormData = this.props.data;
+        const userFormData = this.props;
         const personalSkills = userFormData.userPersonalSkills;
         const professionalSkills = userFormData.userProfessionalSkills;
         const valuesPersonal = userFormData.userPersonalSkillValue;
