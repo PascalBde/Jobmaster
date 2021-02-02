@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Select from "react-select";
 
-import SkillRatingButtons from "./SkillRatingButtons";
 import SkillEntry from "./SkillEntry";
 
 
@@ -129,16 +128,15 @@ class UserDataForm extends Component {
         event.preventDefault();
 
         let {
-            userSkillPersonalName,
-            userSkillValue,
+            userPersonalSkillName,
+            userPersonalSkillValue,
             userPersonalSkills
         } = this.props.data;
-        userSkillPersonalName = userSkillPersonalName.label;
-        userSkillValue = this.props.userSkillValue;
+        userPersonalSkillName = userPersonalSkillName.label;
 
         userPersonalSkills.push({
-            userSkillPersonalName,
-            userSkillValue,
+            userPersonalSkillName,
+            userPersonalSkillValue,
         });
         console.log(userPersonalSkills)
         this.props.onUpdate({userPersonalSkills})
@@ -148,16 +146,15 @@ class UserDataForm extends Component {
         event.preventDefault();
 
         let {
-            userSkillProfessionalName,
-            userSkillValue,
+            userProfessionalSkillName,
+            userProfessionalSkillValue,
             userProfessionalSkills
         } = this.props.data;
-        userSkillProfessionalName = this.props.userSkillProfessionalName;
-        userSkillValue = this.props.userSkillValue;
+        userProfessionalSkillName = userProfessionalSkillName.label;
         
         userProfessionalSkills.push({
-            userSkillProfessionalName,
-            userSkillValue
+            userProfessionalSkillName,
+            userProfessionalSkillValue
         });
         console.log(userProfessionalSkills)
         this.props.onUpdate({userProfessionalSkills})
@@ -167,17 +164,16 @@ class UserDataForm extends Component {
         this.setState({
             [key] : value
         }, ()=>{
-            console.log(this.props.userSkillValue, "userSkillValue has been set to " + value + "!");
+            console.log("userSkillValue has been set to " + this.props.userSkillValue + "!");
         });
     }
 
     render() {
-        const {data} = this.props;
-        const userFormData = data.userData;
+        const userFormData = this.props.data;
         const personalSkills = userFormData.userPersonalSkills;
         const professionalSkills = userFormData.userProfessionalSkills;
-        const values = userFormData.userSkillValue;
-        const radioChangeHandler = this.radioChangeHandler;
+        const valuesPersonal = userFormData.userPersonalSkillValue;
+        const valuesProfessional = userFormData.userProfessionalSkillValue;
 
         return (
             <div>
@@ -196,7 +192,7 @@ class UserDataForm extends Component {
                                                         <input
                                                         required 
                                                         id={'userFirstName'} 
-                                                        value={data.userData.userFirstName} 
+                                                        value={this.props.userFirstName} 
                                                         type="text" 
                                                         className="form-control" 
                                                         onChange={(event)=>{
@@ -211,7 +207,7 @@ class UserDataForm extends Component {
                                                             <input
                                                             required 
                                                             id={'userLastName'}  
-                                                            value={data.userData.userLastName} 
+                                                            value={this.props.userLastName} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -230,7 +226,7 @@ class UserDataForm extends Component {
                                                         <input 
                                                             required
                                                             id={'userStreet'}  
-                                                            value={data.userData.userStreet} 
+                                                            value={this.props.userStreet} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -245,7 +241,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userHouseNumber'}
-                                                            value={data.userData.userHouseNumber} 
+                                                            value={this.props.userHouseNumber} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -263,7 +259,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userPostcode'}  
-                                                            value={data.userData.userPostcode} 
+                                                            value={this.props.userPostcode} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -278,7 +274,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userCity'}  
-                                                            value={data.userData.userCity} 
+                                                            value={this.props.userCity} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -297,7 +293,7 @@ class UserDataForm extends Component {
                                                     <input
                                                         required
                                                         id={'userPhoneNum'}
-                                                        value={data.userData.userPhoneNum}
+                                                        value={this.props.userPhoneNum}
                                                         type="text"
                                                         className="form-control"
                                                         onChange={(event)=>{
@@ -312,7 +308,7 @@ class UserDataForm extends Component {
                                                     <input
                                                         required
                                                         id={'userMobileNum'}
-                                                        value={data.userData.userMobileNum}
+                                                        value={this.props.userMobileNum}
                                                         type="text"
                                                         className="form-control"
                                                         onChange={(event)=>{
@@ -329,7 +325,7 @@ class UserDataForm extends Component {
                                                     <input
                                                         required
                                                         id={'userMailAdress'}
-                                                        value={data.userData.userMailAdress}
+                                                        value={this.props.userMailAdress}
                                                         type="text"
                                                         className="form-control"
                                                         onChange={(event)=>{
@@ -344,7 +340,7 @@ class UserDataForm extends Component {
                                                             <Select
                                                                 className="nationality"
                                                                 options={nationality}
-                                                                value={data.userData.userNationality}
+                                                                value={this.props.userNationality}
                                                                 name="nationality"
                                                                 onChange={(value)=>{
                                                                 this.props.onUpdate('userNationality', value);
@@ -362,7 +358,7 @@ class UserDataForm extends Component {
                                                         <Select
                                                             className="bDays"
                                                             options={bDays}
-                                                            value={data.userData.userDayOfBirth}
+                                                            value={this.props.userDayOfBirth}
                                                             name="bDays"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userDayOfBirth', value);
@@ -376,7 +372,7 @@ class UserDataForm extends Component {
                                                         <Select
                                                             className="bMonths"
                                                             options={bMonths}
-                                                            value={data.userData.userMonthOfBirth}
+                                                            value={this.props.userMonthOfBirth}
                                                             name="bMonths"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userMonthOfBirth', value);
@@ -390,7 +386,7 @@ class UserDataForm extends Component {
                                                         <Select
                                                             className="bYears"
                                                             options={bYears}
-                                                            value={data.userData.userYearOfBirth}
+                                                            value={this.props.userYearOfBirth}
                                                             name="bYears"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userYearOfBirth', value);
@@ -408,7 +404,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userPlaceOfBirth'} 
-                                                            value={data.userData.userPlaceOfBirth} 
+                                                            value={this.props.userPlaceOfBirth} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -423,7 +419,7 @@ class UserDataForm extends Component {
                                                         <Select 
                                                             className="maritalStatus"
                                                             options={maritalStatus}
-                                                            value={data.userData.userMaritalStatus}
+                                                            value={this.props.userMaritalStatus}
                                                             name="maritalStatus"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userMaritalStatus', value);
@@ -446,46 +442,116 @@ class UserDataForm extends Component {
                                     <div className="card-body">
                                         <section>
                                             <div className="row">               
-                                                <div className="col-4">
+                                                <div className="col-5">
                                                     <div className="detailinfo">
                                                         <Select
                                                             className="personalSkilloptions"
                                                             options={personalSkilloptions}
-                                                            value={data.userData.userSkillPersonalName}
-                                                            name="personalSkilloptions"
+                                                            value={this.props.userPersonalSkillName}
+                                                            name="userSkillName"
                                                             onChange={(value)=>{
-                                                            this.props.onUpdate('userSkillPersonalName', value);
+                                                            this.props.onUpdate('userPersonalSkillName', value);
                                                             }}
                                                             placeholder="Bitte wählen"
                                                         />
                                                     </div>
                                                 </div>
                                                 <div className="col-5">
-                                                <SkillRatingButtons 
-                                                    skillValue={this.props["userSkillValue"]}
-                                                    values={values}
-                                                    radioChangeHandler={radioChangeHandler}
-                                                />
+                                                <div className="row mt-2">
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userPersonalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"1"}
+                                                            checked={valuesPersonal === "1"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        1
+                                                    </label>
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userPersonalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"2"}
+                                                            checked={valuesPersonal === "2"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        2
+                                                    </label>
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userPersonalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"3"}
+                                                            checked={valuesPersonal === "3"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        3
+                                                    </label>
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userPersonalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"4"}
+                                                            checked={valuesPersonal === "4"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        4
+                                                    </label>
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userPersonalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"5"}
+                                                            checked={valuesPersonal === "5"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        5
+                                                    </label>
+                                                </div>
                                                 </div>
                                                 <div>
                                                     <button
                                                         type="submit"
                                                         className="addSkillEntryButton mt-1"
-                                                    >Hinzufügen
+                                                    >Eintragen
                                                     </button>
                                                 </div>
                                             </div>
                                         </section>
+                                        <hr />
+                                        <div className="row offset-4">
+                                            <div className="col-12">
+                                            {personalSkills.map((skill, index) => {
+                                            return(
+                                                <SkillEntry skill={skill} skillIndex={index} />
+                                            );
+                                            })}
+                                            </div>
+                                        </div>
                                     </div>
                             </form>
-                            <hr />
-                            <div className="row">
-                                {personalSkills.map((skill, index) => {
-                                    return(
-                                        <SkillEntry skill={skill} skillIndex={index} />
-                                    );
-                                })}
-                            </div>
+                            
                         </div>
                     </div>
                     <div className="col-4">
@@ -495,45 +561,115 @@ class UserDataForm extends Component {
                                     <div className="card-body">
                                         <section>
                                             <div className="row">               
-                                                <div className="col-4">
+                                                <div className="col-5">
                                                     <div className="detailinfo">
                                                         <Select
                                                             className="jobSkilloptions"
                                                             options={jobSkilloptions}
-                                                            value={data.userData.userSkillProfessionalName}
+                                                            value={this.props.userProfessionalSkillName}
                                                             name="jobSkilloptions"
                                                             onChange={(value)=>{
-                                                            this.props.onUpdate('userSkillProfessionalName', value);
+                                                            this.props.onUpdate('userProfessionalSkillName', value);
                                                             }}
                                                             placeholder="Bitte wählen"
                                                         />
                                                     </div>
                                                 </div>
                                                 <div className="col-5">
-                                                <SkillRatingButtons
-                                                    skillValue={this.props["userSkillValue"]}
-                                                    values={values} 
-                                                    radioChangeHandler={radioChangeHandler}/>
+                                                <div className="row mt-2">
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userProfessionalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"1"}
+                                                            checked={valuesProfessional === "1"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        1
+                                                    </label>               
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userProfessionalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"2"}
+                                                            checked={valuesProfessional === "2"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        2
+                                                    </label>
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userProfessionalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"3"}
+                                                            checked={valuesProfessional === "3"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        3
+                                                    </label>
+                                                <div className="offset-1" />
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userProfessionalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"4"}
+                                                            checked={valuesProfessional === "4"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        4
+                                                    </label>
+                                                <div className="offset-1" /> 
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            id={"userProfessionalSkillValue"}
+                                                            name={"skillRadio"}
+                                                            value={"5"}
+                                                            checked={valuesProfessional === "5"}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
+                                                            }}
+                                                        />
+                                                        5
+                                                    </label>
+                                                </div>
                                                 </div>
                                                 <div>
                                                     <button
                                                         type="submit"
                                                         className="addSkillEntryButton mt-1"
-                                                    >Hinzufügen
+                                                    >Eintragen
                                                     </button>
                                                 </div>
                                             </div>
                                         </section>
+                                        <hr />
+                                        <div className="row offset-4">
+                                            <div className="col-12">
+                                            {professionalSkills.map((skill, index) => {
+                                                return(
+                                                    <SkillEntry skill={skill} skillIndex={index} />
+                                                );
+                                            })}
+                                            </div>
+                                        </div>
                                     </div>
                             </form>
-                            <hr />
-                            <div className="row">
-                                {professionalSkills.map((skill, index) => {
-                                    return(
-                                        <SkillEntry skill={skill} skillIndex={index} />
-                                    );
-                                })}
-                            </div>
                         </div>
                     </div>
                 </div>
