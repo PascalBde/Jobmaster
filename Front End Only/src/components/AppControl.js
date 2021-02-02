@@ -49,7 +49,8 @@ class AppControl extends Component {
                     userMaritalStatus: "",
                     userSkillPersonalName: "",
                     userSkillProfessionalName: "",
-                    userSkillValue: "",
+                    userPersonalSkillValue: "",
+                    userProfessionalSkillValue: "",
                     userPersonalSkills: [],
                     userProfessionalSkills: []
                 },
@@ -164,7 +165,7 @@ class AppControl extends Component {
                     </TabList>
                     <TabPanel>
                         <UserDataForm
-                            data={this.state.final}
+                            data={this.state.final.userData}
                             onUpdate={(field, data) => {
                                 this.updateState("userData", field, data);
                             }}/>
