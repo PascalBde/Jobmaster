@@ -13,7 +13,7 @@ class SkillEntry extends Component {
         return(
             <div>
                 <div className="row">
-                    <div className="col-2">
+                    <div className="col-12">
                         <div>
                             <p>
                                 {skill.userSkillPersonalName || skill.userSkillProfessionalName}
