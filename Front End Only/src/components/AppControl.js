@@ -48,7 +48,7 @@ class AppControl extends Component {
                     userPlaceOfBirth: "",
                     userMaritalStatus: "",
                     userSkillPersonalName: "",
-                    userSkillProfessionalName: "",
+                    userSkillProfessionalNam: "",
                     userSkillValue: "",
                     userPersonalSkills: [],
                     userProfessionalSkills: []
