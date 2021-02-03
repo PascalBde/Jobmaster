@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import AppControl from "./components/AppControl";
 
-import "./components/Standard.css";
+
 import './bootstrap/bootstrap.scss';
 
 

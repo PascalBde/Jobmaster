@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ReactStars from "react-stars";
+import XCircle from "react-feather/dist/icons/x-circle"
 
 class SkillEntry extends Component {
     constructor(props) {
@@ -14,6 +15,8 @@ class SkillEntry extends Component {
         return(
             <div>
                 <div className="row">
+
+                    
                    
                         <div className="mt-2">
                         {skill.userPersonalSkillName || skill.userProfessionalSkillName}: 
@@ -25,8 +28,9 @@ class SkillEntry extends Component {
                             size={24}
                         />
                         </div>
-                        
-                    
+                        <XCircle className="skillDeleteButton mt-2 offset-1" onClick={()=>{
+                        this.props.deleteEntry(this.props.entryIndex);
+                    }}/>
                 </div>
             </div>
         )
