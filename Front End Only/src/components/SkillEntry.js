@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ReactStars from "react-stars";
 
 class SkillEntry extends Component {
     constructor(props) {
@@ -13,16 +14,19 @@ class SkillEntry extends Component {
         return(
             <div>
                 <div className="row">
-                    <div className="col-12">
-                        <div>
-                            <p>
-                                {skill.userSkillPersonalName || skill.userSkillProfessionalName}
-                            </p>
-                            <p>
-                                {skill.userSkillPersonalValue || skill.userSkillProfessionalValue}
-                            </p>
+                   
+                        <div className="mt-2">
+                        {skill.userPersonalSkillName || skill.userProfessionalSkillName}: 
                         </div>
-                    </div>
+                        <div className="ml-1">
+                        <ReactStars 
+                            count={skill.userSkillPersonalValue || skill.userSkillProfessionalValue}
+                            color1="#ffc412"
+                            size={24}
+                        />
+                        </div>
+                        
+                    
                 </div>
             </div>
         )
