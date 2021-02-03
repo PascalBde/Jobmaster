@@ -23,9 +23,11 @@ class SkillEntry extends Component {
                         </div>
                         <div className="ml-1">
                         <ReactStars 
-                            count={skill.userSkillPersonalValue || skill.userSkillProfessionalValue}
+                            count={skill.userPersonalSkillValue || skill.userProfessionalSkillValue}
                             color1="#ffc412"
                             size={24}
+                            edit={false}
+                            half={false}
                         />
                         </div>
                         <XCircle className="skillDeleteButton mt-2 offset-1" onClick={()=>{

@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import PrintIcon from 'react-feather/dist/icons/printer';
+import ReactStars from "react-stars";
 
 
 class Final extends Component {
@@ -15,7 +16,54 @@ class Final extends Component {
     render() {
         const final = this.props.data;
         
-        
+        // PersonalSkills
+        let vitaPersonalSkills = [];
+        if (final.userData.userPersonalSkills && final.userData.userPersonalSkills.length > 0) {
+            for (const vitaPersonalSkill of final.userData.userPersonalSkills) {
+                vitaPersonalSkills.push(
+                    <div>
+                        
+                        <div className="row">
+                        <div className="vitaText col-12">
+                        {vitaPersonalSkill.userPersonalSkillName}: <ReactStars
+                            className="ml-1" 
+                            count={vitaPersonalSkill.userPersonalSkillValue}
+                            color1="#ffc412"
+                            size={24}
+                            edit={false}
+                            half={false}
+                        />
+                        </div>
+                        
+                        </div>
+                        <br />
+                    </div>
+                )
+            }
+        }
+
+        // ProfessionalSkills
+        let vitaProfessionalSkills = [];
+        if (final.userData.userProfessionalSkills && final.userData.userProfessionalSkills.length > 0) {
+            for (const vitaProfessionalSkill of final.userData.userProfessionalSkills) {
+                vitaProfessionalSkills.push(
+                    <div>
+                        <div className="row">
+                        <div className="vitaText col-12">
+                        {vitaProfessionalSkill.userProfessionalSkillName}: <ReactStars
+                            className="ml-1" 
+                            count={vitaProfessionalSkill.userProfessionalSkillValue}
+                            color1="#ffc412"
+                            size={24}
+                            edit={false}
+                            half={false}
+                        />
+                        </div>
+                        </div>
+                    </div>
+                )
+            }
+        }
 
         // Schoolentries 
         let vitaEntriesSchool = [];
@@ -378,7 +426,34 @@ class Final extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div className="card-body">                                            
+                                            <div className="row">
+                                               <div className="col-12">
+                                                    <p className="vitaUserSubHeader">Berufliche Skills</p>   
+                                                </div> 
+                                            </div>
+                                            {vitaProfessionalSkills.length > 0 &&
+                                                <div className="row">
+                                                    <div className="col-12">
+                                                        <div>{vitaProfessionalSkills}</div>
+                                                    </div>
+                                                </div>    
+                                            }
+                                            <br />
+                                            <div className="row">
+                                               <div className="col-12">
+                                                    <p className="vitaUserSubHeader">Persönliche Skills</p>   
+                                                </div> 
+                                            </div>
+                                            {vitaPersonalSkills.length > 0 &&
+                                                <div className="row">
+                                                    <div className="col-12">
+                                                        <div>{vitaPersonalSkills}</div>
+                                                    </div>
+                                                </div>    
+                                            }
+                                            <br />
+                                        </div>
                                         </div>
                                     </div>
 
