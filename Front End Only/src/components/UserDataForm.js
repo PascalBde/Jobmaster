@@ -105,6 +105,8 @@ class UserDataForm extends Component {
         this.handleSelect = this.handleSelect.bind(this);
         this.submitPersonalSkill = this.submitPersonalSkill.bind(this);
         this.submitProfessionalSkill = this.submitProfessionalSkill.bind(this);
+        this.deletePersonalSkill = this.deletePersonalSkill.bind(this);
+        this.deleteProfessionalSkill = this.deleteProfessionalSkill.bind(this);
         this.radioChangeHandler = this.radioChangeHandler.bind(this);
     }
 
@@ -158,6 +160,24 @@ class UserDataForm extends Component {
         });
         console.log(userProfessionalSkills)
         this.props.onUpdate({userProfessionalSkills})
+    }
+
+    deletePersonalSkill(index) {
+        console.log(index);
+        let {userPersonalSkills} = this.props.data;
+
+        userPersonalSkills.splice(index, 1);
+
+        this.setState({userPersonalSkills});
+    }
+
+    deleteProfessionalSkill(index) {
+        console.log(index);
+        let {userProfessionalSkills} = this.props.data;
+
+        userProfessionalSkills.splice(index, 1);
+
+        this.setState({userProfessionalSkills});
     }
 
     radioChangeHandler(event, key, value) {
@@ -544,7 +564,7 @@ class UserDataForm extends Component {
                                             <div className="col-12">
                                             {personalSkills.map((skill, index) => {
                                             return(
-                                                <SkillEntry skill={skill} skillIndex={index} />
+                                                <SkillEntry skill={skill} skillIndex={index} deleteEntry={this.deletePersonalSkill}/>
                                             );
                                             })}
                                             </div>
@@ -663,7 +683,7 @@ class UserDataForm extends Component {
                                             <div className="col-12">
                                             {professionalSkills.map((skill, index) => {
                                                 return(
-                                                    <SkillEntry skill={skill} skillIndex={index} />
+                                                    <SkillEntry skill={skill} skillIndex={index} deleteEntry={this.deleteProfessionalSkill}/>
                                                 );
                                             })}
                                             </div>
