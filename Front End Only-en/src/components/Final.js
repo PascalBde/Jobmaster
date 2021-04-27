@@ -395,7 +395,7 @@ class Final extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-4">
-                                                        <p className="vitaText">Date of birth:</p>
+                                                        <p className="vitaText">Day of birth:</p>
                                                     </div>
                                                     <div className="col-6">
                                                         <p>{final.userData.userDayOfBirth.label}.{final.userData.userMonthOfBirth.value}.{final.userData.userYearOfBirth.value}</p>
@@ -540,7 +540,7 @@ class Final extends Component {
                 <button
                 className="sendMail btn-block mb-5"
                 type="submit"
-                >Submit application</button>
+                >Submit Application</button>
                 
                 </div>
                 </div>

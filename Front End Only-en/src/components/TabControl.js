@@ -128,10 +128,10 @@ class TabControl extends Component {
 
                 <Tabs>
                     <TabList>
-                        <Tab>Cover Letter</Tab>
-                        <Tab>Curricullum Vitae</Tab>
-                        <Tab>Attachments</Tab>
-                        <Tab>Overview</Tab>
+                        <Tab>Anschreiben</Tab>
+                        <Tab>Lebenslauf</Tab>
+                        <Tab>Anlagen</Tab>
+                        <Tab>Übersicht</Tab>
                     </TabList>
                     <TabPanel>
                         <CoverLetter

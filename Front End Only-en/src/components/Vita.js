@@ -200,7 +200,7 @@ class Vita extends Component {
     this.props.onUpdate({practices});
     }
 
-    rendr() {
+    render() {
         const vitaData = this.props.data;
         const entriesJob = vitaData.jobs;
         const entriesSchool = vitaData.schools;
@@ -299,7 +299,7 @@ class Vita extends Component {
                                             type="text"
                                             value={this.props.position}
                                             name="position"
-                                            placeholder="  Bürokaufmann/-frau / Kaufm. Angestellte/-r"
+                                            placeholder="  Office clerk / Web Developer"
                                             onChange={(event)=>{
                                                 this.props.onUpdate('position', event.target.value);
                                             }}
@@ -486,14 +486,14 @@ class Vita extends Component {
                                         </div>
                                 </div>
                                 <hr />
-                                            <h4 className="selectLabel">Schule / Universität</h4>
+                                            <h4 className="selectLabel">School / University</h4>
                                                 <input
                                                     required
                                                     className="form-control"
                                                     type="text"
                                                     value={this.props.nameOfSchool}
                                                     name="nameOfSchool"
-                                                    placeholder="  Name der Schule / Univeristät"
+                                                    placeholder="  Name of School / University"
                                                     onChange={(event)=>{
                                                         this.props.onUpdate('nameOfSchool', event.target.value);
                                                     }}
@@ -506,7 +506,7 @@ class Vita extends Component {
                                                     type="text"
                                                     value={this.props.schoolGraduation}
                                                     name="schoolGraduation"
-                                                    placeholder="  Mittlere Reife / Abitur / Fachhochschulreife"
+                                                    placeholder="  School / University Graduation"
                                                     onChange={(event)=>{
                                                         this.props.onUpdate('schoolGraduation', event.target.value);
                                                     }}
@@ -598,7 +598,7 @@ class Vita extends Component {
                                                     type="text"
                                                     value={this.props.practiceCompany}
                                                     name="practiceCompany"
-                                                    placeholder="  Name des Praktikumbetriebs"
+                                                    placeholder="  Name of practice Company"
                                                     onChange={(event)=>{
                                                         this.props.onUpdate('practiceCompany', event.target.value);
                                                     }}
@@ -611,7 +611,7 @@ class Vita extends Component {
                                                     type="text"
                                                     value={this.props.profession}
                                                     name="profession"
-                                                    placeholder="  Bürokaufmann/-frau / Front End Developer"
+                                                    placeholder="  Bürokaufmann/-frau / Web Developer"
                                                     onChange={(event)=>{
                                                         this.props.onUpdate('profession', event.target.value);
                                                     }}

@@ -30,7 +30,7 @@ class EmployerData extends Component {
                                             Company name
                                                 <input 
                                                 id={'nameOfCompany'} 
-                                                placeholder={'Musterfirma GmbH'} 
+                                                placeholder={'Company'} 
                                                 value={data.nameOfCompany} 
                                                 type="text" 
                                                 className="form-control" 
@@ -45,7 +45,7 @@ class EmployerData extends Component {
                                                 Contact Person
                                                     <input 
                                                     id={'contactPerson'} 
-                                                    placeholder={'Frau / Herr Petra / Peter Müller'} 
+                                                    placeholder={'Ms. / Mr. Smith'} 
                                                     value={data.contactPerson} 
                                                     type="text" 
                                                     className="form-control" 
@@ -60,7 +60,7 @@ class EmployerData extends Component {
                                                 Street
                                                 <input 
                                                     id={'street'} 
-                                                    placeholder={'Musterstrasse'} 
+                                                    placeholder={'Street'} 
                                                     value={data.street} 
                                                     type="text" 
                                                     className="form-control" 
@@ -102,10 +102,10 @@ class EmployerData extends Component {
                                         </div>
                                         <div className="col-12">
                                             <div className="detailInfo">
-                                                City
+                                                Stadt
                                                 <input 
                                                     id={'city'} 
-                                                    placeholder={'Berlin / Hamburg / ...'} 
+                                                    placeholder={'Berlin / Paris / New York ...'} 
                                                     value={data.city} 
                                                     type="text" 
                                                     className="form-control" 

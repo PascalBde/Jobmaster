@@ -40,18 +40,18 @@ const letterCreationDays = [
     {value: "31", label: "31"}
 ]
 const letterCreationMonths = [
-    {value: "01", label: "Januar"}, 
-    {value: "02", label: "Februar"}, 
-    {value: "03", label: "März"}, 
+    {value: "01", label: "January"}, 
+    {value: "02", label: "February"}, 
+    {value: "03", label: "March"}, 
     {value: "04", label: "April"}, 
-    {value: "05", label: "Mai"}, 
-    {value: "06", label: "Juni"}, 
-    {value: "07", label: "Juli"}, 
+    {value: "05", label: "May"}, 
+    {value: "06", label: "June"}, 
+    {value: "07", label: "July"}, 
     {value: "08", label: "August"}, 
     {value: "09", label: "September"}, 
-    {value: "10", label: "Oktober"}, 
+    {value: "10", label: "October"}, 
     {value: "11", label: "November"}, 
-    {value: "12", label: "Dezember"}
+    {value: "12", label: "December"}
 ]
 
 const letterCreationYears = YearData
@@ -82,22 +82,22 @@ class CoverLetter extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                         <div>
-                                            {(data && data.userData) ? data.userData.userFirstName : 'No Data found! :('} {(data && data.userData) ? data.userData.userLastName : 'No Data found! :('}  
+                                            {(data && data.userData) ? data.userData.userFirstName : 'Keine Daten'} {(data && data.userData) ? data.userData.userLastName : 'Keine Daten'}  
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userStreet : 'No Data found! :('} {(data && data.userData) ? data.userData.userHouseNumber : 'No Data found! :('}
+                                            {(data && data.userData) ? data.userData.userStreet : 'Keine Daten'} {(data && data.userData) ? data.userData.userHouseNumber : 'Keine Daten'}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userPostcode : 'No Data found! :('} {(data && data.userData) ? data.userData.userCity : 'No Data found! :('}
+                                            {(data && data.userData) ? data.userData.userPostcode : 'Keine Daten'} {(data && data.userData) ? data.userData.userCity : 'Keine Daten'}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userPhoneNum : 'No Data found! :('}
+                                            {(data && data.userData) ? data.userData.userPhoneNum : 'Keine Daten'}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userMobileNum : 'No Data found! :('}
+                                            {(data && data.userData) ? data.userData.userMobileNum : 'Keine Daten'}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userMailAdress : 'No Data found! :('}
+                                            {(data && data.userData) ? data.userData.userMailAdress : 'Keine Daten'}
                                         </div>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@ class CoverLetter extends Component {
                                                 <input
                                                 required 
                                                 id={'nameOfCompany'} 
-                                                placeholder={'Musterfirma GmbH'} 
+                                                placeholder={'Company'} 
                                                 value={data.coverLetter.nameOfCompany} 
                                                 type="text" 
                                                 className="form-control" 
@@ -137,7 +137,7 @@ class CoverLetter extends Component {
                                                 Contact Person
                                                     <input 
                                                     id={'contactPerson'} 
-                                                    placeholder={'Frau / Herr Petra / Peter Müller'} 
+                                                    placeholder={'Ms. / Mr. Smith'} 
                                                     value={data.coverLetter.contactPerson} 
                                                     type="text" 
                                                     className="form-control" 
@@ -157,7 +157,7 @@ class CoverLetter extends Component {
                                                 <input 
                                                     required
                                                     id={'street'} 
-                                                    placeholder={'Musterstrasse'} 
+                                                    placeholder={'Street'} 
                                                     value={data.coverLetter.street} 
                                                     type="text" 
                                                     className="form-control" 
@@ -211,7 +211,7 @@ class CoverLetter extends Component {
                                                 <input
                                                     required 
                                                     id={'city'} 
-                                                    placeholder={'Berlin / Hamburg / ...'} 
+                                                    placeholder={'Berlin / Paris / New York ...'} 
                                                     value={data.coverLetter.city} 
                                                     type="text" 
                                                     className="form-control" 
@@ -233,7 +233,7 @@ class CoverLetter extends Component {
                                         <input
                                             required
                                             id={'employerMail'}
-                                            placeholder={'Email hier eintragen'}
+                                            placeholder={'Enter Email here'}
                                             value={data.coverLetter.employerMail}
                                             type="text"
                                             className="form-control"
@@ -270,7 +270,7 @@ class CoverLetter extends Component {
                                 <input
                                     required 
                                     id={'jobDescription'} 
-                                    placeholder={'Stellenbezeichnung (z.B. Kaufmännische Fachkraft)'} 
+                                    placeholder={'Job title (e.g. commercial specialist)'} 
                                     value={data.coverLetter.jobDescription} 
                                     type="text" 
                                     className="form-control" 
@@ -296,7 +296,7 @@ class CoverLetter extends Component {
                                                 onChange={(value)=>{
                                                 this.props.onUpdate('letterCreationDay', value);
                                                 }}
-                                                placeholder="Tag"
+                                                placeholder="Day"
                                             />
                                         </div>
                                     </div>
@@ -310,7 +310,7 @@ class CoverLetter extends Component {
                                                 onChange={(value)=>{
                                                 this.props.onUpdate('letterCreationMonth', value);
                                                 }}
-                                                placeholder="Monat"
+                                                placeholder="Month"
                                             />
                                         </div>
                                     </div>
@@ -324,7 +324,7 @@ class CoverLetter extends Component {
                                                 onChange={(value)=>{
                                                 this.props.onUpdate('letterCreationYear', value);
                                                 }}
-                                                placeholder="Jahr"
+                                                placeholder="Year"
                                             />
                                         </div>
                                     </div>
@@ -341,7 +341,7 @@ class CoverLetter extends Component {
                                         config={{
                                            // plugins: [],       
                                             toolbar: ['undo', 'redo'],
-                                            placeholder: "Sehr geehrte Frau / Sehr geehrter Herr / Sehr geehrte Damen und Herren,"
+                                            placeholder: "Dear Ms. / Dear Mr. / Dear Sir or Madam,"
                                          }}   
                                         data={data.coverLetter.letterText}
                                         onInit={ editor => {

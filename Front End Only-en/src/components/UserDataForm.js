@@ -6,9 +6,10 @@ import SkillEntry from "./SkillEntry";
 
 const maritalStatus = [
     {value:"single", label:"Single"},
-    {value:"steadyRelationship", label:"Married"},
+    {value:"steadyRelationship", label:"Steady Relationship"},
+    {value:"married", label:"Married"},
     {value:"divorced", label:"Divorced"},
-    {value:"widowed", label:"Widwowed"}
+    {value:"widowed", label:"Widowed"}
 ]
 const nationality = [
     {value:"american", label:"American"},
@@ -87,7 +88,7 @@ const personalSkilloptions = [
     {value: "Motivation", label: "Motivation"},
     {value: "Troubleshooting", label: "Troubleshooting"},
     {value: "Independently", label: "Independently"},
-    {value: "Carefulness", label: "Carefulness"},
+    {value: "Diligence", label: "Diligence"},
     {value: "Teamplayer", label: "Teamplayer"},
     {value: "Reliability", label: "Reliability"}
 ]
@@ -309,7 +310,7 @@ class UserDataForm extends Component {
                                             
                                                 <div className="col-6">
                                                     <div className="detailInfo">    
-                                                        Telephone
+                                                        Phone
                                                     <input
                                                         required
                                                         id={'userPhoneNum'}
