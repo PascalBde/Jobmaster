@@ -1,0 +1,299 @@
+<button className={'btn btn-info'} onClick={async ()=>{
+          let {abschluss} = this.state;
+
+          await save(abschluss.stammdaten.name + '.char', JSON.stringify(abschluss)); 
+        }
+        }><SaveIcon/></button>
+        <button className={'btn btn-info'} onClick={async ()=>{
+            fileDialog()
+            .then(files => {
+              var reader = new FileReader();
+
+              // Closure to capture the file information.
+              reader.onload = (function(theFile) {
+                return function(e) {
+                  let result = JSON.parse(e.target.result);
+                  console.log(result);
+                  this.setState({
+                    abschluss: result
+                  })
+                  this.forceUpdate();
+                };
+              })(files[0]).bind(this);
+
+              // Read in the image file as a data URL.
+              reader.readAsText(files[0]);
+            })
+        }
+        }><LoadIcon/></button>
+
+
+        //    countVitaEntries: this.state.vitaEntryData.length || 0,
+        //    vitaEntryData: this.state.vitaEntryData || [],
+        //    startDate: new Date(),
+        //    selectedStartDate: [],
+        //    selectedEndDate: []
+
+
+         //    this.getVitaEntry = this.getVitaEntry.bind(this);
+    //    this.handleChangeStart = this.handleChangeStart.bind(this);
+    //    this.onFormSubmit = this.onFormSubmit.bind(this);
+
+    //   handleChangeStart() {
+//        this.setState({
+  //        selected: this.state.selectedStartDate
+ //       })
+ //     }
+
+   // onFormSubmit(e) {
+   //     e.preventDefault();
+        
+    //    console.log(this.state.startDate);
+   //   }
+
+    // Neuen Eintrag für den Lebenslauf erstellen {this.vitaEntryData.push(this.selectedStartDate)} {this.vitaEntryData.push(this.selectedEndDate)};
+    // getVitaEntry(index) {
+       // let newEntry = [];
+      //  let allEntries = this.state.vitaEntryData; 
+      //  console.log(vitaEntryData); 
+
+      // }
+ //  componentWillMount() {
+//    console.log(this.props);
+//  }
+
+// <DatePicker
+                 //   selected={this.state.startDate}
+                 //   onChange={this.state.selectedEndDate}
+                 //   dateFormat="MM/yyyy"
+                 //   minDate={subDays(new Date(), 14600)}
+         //      /> <div className="Container">
+     //    <form onSubmit={this.onFormSubmit}>
+      //   <div className="form-group">
+    //      <label>Select Date: </label>
+      //        <DatePicker
+      //        selected={this.state.startDate}
+      //        onChange={this.handleChangeStart}
+     //         name="startDate"
+     //         dateFormat="dd/MM/yyyy"
+     //         minDate={new Date() - 14600}
+     //         /> 
+      //    </div>
+
+      class Lebenslauf extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+        
+        }
+
+   
+    }
+
+//      <div className="form-group">
+      //        <button className="btn btn-success">Add Date</button>
+     //     </div>
+    //  </form>
+ // </div>
+
+ //   <div>
+     //           <div className="row">
+      //          <div className="col-8">
+                   
+      //          </div>
+     //       </div>
+            
+       // </div> <option value="">-- Monat auswählen --</option>
+       // <option value=""></option>
+       // </select>
+
+agDataSubmit(event) {
+        event.preventDefault();
+
+        let {
+            firmenname,
+            ansprechpartner,
+            strasse,
+            hausnummer,
+            postleitzahl,
+            stadt,
+            employerData
+        } = this.state;
+
+        employerData.push({
+            firmenname,
+            ansprechpartner,
+            strasse,
+            hausnummer,
+            postleitzahl,
+            stadt
+        });
+        console.log(employerData);
+        this.setState({employerData})
+    }
+
+    #1c1c79
+
+    // Closure to capture the file information.
+              reader.onload = (function(theFile) {
+                return function(e) {
+                  let result = JSON.parse(e.target.result);
+                  console.log(result);
+                  this.setprops({
+                    final: result
+                  })
+                  this.forceUpdate();
+                };
+              })(files[0]).bind(this);
+
+              // Read in the image file as a data URL.
+              reader.readAsText(files[0]);
+            })
+        }
+        }><LoadIcon/></button>
+
+
+
+        <FlipMove typeName={null} duration={250} easing="ease-out">
+                            <XCircle className="entryDeleteButton" onClick={()=>{
+                                this.props.deleteEntry(this.props.entryIndex);
+                            }}/>
+                            <div className="entryObject">
+                            <p className="entryDates">
+                            {entry.selectedStartMonth}.{entry.selectedStartYear} - {entry.selectedEndMonth}.{entry.selectedEndYear}
+                            <strong className="positionEntry">{entry.schoolGraduation}</strong>
+                        
+                            <br/>
+                            <strong className="firmaEntry">{entry.nameOfSchool}</strong> 
+                            
+                             </p>
+                            </div>
+                            </FlipMove>
+
+
+    /**
+    componentWillReceiveProps(nextProps, nextState) {
+      console.log('tab control did mount', nextProps);
+        if(nextProps.data) {
+
+            const {
+              userName,
+              userAdress,
+              userOrigin,
+              userPhoneNum,
+              userMobileNum,
+              userMailadress,
+              userBirthday,
+              userPlaceOfBirth,
+              userMaritalStatus,
+              nameOfCompany, 
+              contactPerson, 
+              street, 
+              housenumber, 
+              postcode, 
+              city,
+              employerMail, 
+              jobDescription, 
+              letterText, 
+              entries,
+              company,
+              position,
+              trainingCompany,
+              jobGraduation,
+              nameOfSchool,
+              schoolGraduation,
+              attachments,
+              date
+            } = this.props.data;
+            this.setState({
+                userName,
+                userAdress,
+                userOrigin,
+                userPhoneNum,
+                userMobileNum,
+                userMailadress,
+                userBirthday,
+                userPlaceOfBirth,
+                userMaritalStatus,
+                nameOfCompany,
+                contactPerson,
+                street,
+                housenumber,
+                postcode,
+                city,
+                employerMail,
+                jobDescription,
+                letterText,
+                entries,
+                company,
+                position,
+                trainingCompany,
+                jobGraduation,
+                nameOfSchool,
+                schoolGraduation,
+                attachments,
+                date
+            });
+        }
+    }
+ */
+
+
+ componentWillMount() {
+      if(this.props.data) {
+          const {
+            nameOfCompany, 
+            contactPerson, 
+            street, 
+            housenumber, 
+            postcode, 
+            city,
+            employerMail, 
+            jobDescription, 
+            letterText, 
+            jobs,
+            schools,
+            educations,
+            attachments,
+            date
+          } = this.props.data;
+          this.setState({
+              nameOfCompany,
+              contactPerson,
+              street,
+              housenumber,
+              postcode,
+              city,
+              employerMail,
+              jobDescription,
+              letterText,
+              jobs,
+              schools,
+              educations,
+              attachments,
+              date
+          });
+      }
+  }
+
+
+  <h4 className="selectLabel">Beginn / Ende:</h4>
+                                            <DatePicker
+                                                selected={this.props.selectedStartDateJob}
+                                                className="form-control"
+                                                onChange={(date)=>{
+                                                    console.log('date', date);
+                                                    this.setState({selectedStartDateJob: date});
+                                                    this.props.onUpdate('selectedStartDateJob', date);
+                                                }}
+                                            />-
+                                            <DatePicker
+                                                selected={this.props.selectedEndDateJob}
+                                                className="form-control"
+                                                onChange={(date)=>{
+                                                    console.log('date', date);
+                                                    this.setState({selectedEndDateJob: date});
+                                                    this.props.onUpdate('selectedEndDateJob', date);
+                                                }}
+                                            />
