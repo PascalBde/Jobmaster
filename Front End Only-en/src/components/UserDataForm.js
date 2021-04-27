@@ -6,18 +6,18 @@ import SkillEntry from "./SkillEntry";
 
 const maritalStatus = [
     {value:"single", label:"Single"},
-    {value:"steadyRelationship", label:"In fester Beziehung"},
-    {value:"married", label:"Verheiratet"},
-    {value:"divorced", label:"Geschieden"},
-    {value:"widowed", label:"Verwitwet"}
+    {value:"steadyRelationship", label:"Married"},
+    {value:"divorced", label:"Divorced"},
+    {value:"widowed", label:"Widwowed"}
 ]
 const nationality = [
-    {value:"american", label:"Amerikanisch"},
-    {value:"german", label:"Deutsch"},
-    {value:"english", label:"Englisch"},
-    {value:"french", label:"Französisch"},
-    {value:"spanish", label:"Spanisch"},
-    {value:"turkish", label:"Türkisch"}
+    {value:"american", label:"American"},
+    {value:"german", label:"German"},
+    {value:"english", label:"British"},
+    {value:"french", label:"French"},
+    {value:"spanish", label:"Spanish"},
+    {value:"turkish", label:"Turkish"},
+    {value:"ukrainian", label:"Ukrainian"}
 ]
 const bDays = [
     {value: "1", label: "01"}, 
@@ -53,18 +53,18 @@ const bDays = [
     {value: "31", label: "31"}
 ]
 const bMonths = [
-    {value: "01", label: "Januar"}, 
-    {value: "02", label: "Februar"}, 
-    {value: "03", label: "März"}, 
+    {value: "01", label: "January"}, 
+    {value: "02", label: "February"}, 
+    {value: "03", label: "March"}, 
     {value: "04", label: "April"}, 
-    {value: "05", label: "Mai"}, 
-    {value: "06", label: "Juni"}, 
-    {value: "07", label: "Juli"}, 
+    {value: "05", label: "May"}, 
+    {value: "06", label: "June"}, 
+    {value: "07", label: "July"}, 
     {value: "08", label: "August"}, 
     {value: "09", label: "September"}, 
-    {value: "10", label: "Oktober"}, 
+    {value: "10", label: "October"}, 
     {value: "11", label: "November"}, 
-    {value: "12", label: "Dezemer"}
+    {value: "12", label: "December"}
 ]
 const bYears = [
         {value: "2021", label: "2021"}, {value: "2020", label: "2020"}, {value: "2019", label: "2019"}, {value: "2018", label: "2018"}, {value: "2017", label: "2017"}, {value: "2016", label: "2016"},
@@ -79,17 +79,17 @@ const bYears = [
         {value: "1975", label: "1975"}, {value: "1974", label: "1974"}, {value: "1972", label: "1972"}, {value: "1971", label: "1971"}, {value: "1970", label: "1970"},
 ]
 const personalSkilloptions = [
-    {value: "Akkurat", label: "Akkurat" }, 
-    {value: "Analyse", label: "Analyse"}, 
-    {value: "Belastbarkeit", label: "Belastbarkeit"}, 
-    {value: "Kommunikativ", label: "Kommunikativ"},
-    {value: "Lernbereitschaft", label: "Lernbereitschaft"},
+    {value: "Accurate", label: "Accurate" }, 
+    {value: "Analysis", label: "Analysis"}, 
+    {value: "Resilience", label: "Resilience"}, 
+    {value: "Communicative", label: "Communicative"},
+    {value: "Willingness to learn", label: "Willingness to learn"},
     {value: "Motivation", label: "Motivation"},
-    {value: "Problemlösung", label: "Problemlösung"},
-    {value: "Selbstständig", label: "Selbstständig"},
-    {value: "Sorgfalt", label: "Sorgfalt"},
-    {value: "Teamfähigkeit", label: "Teamfähigkeit"},
-    {value: "Zuverlässigkeit", label: "Zuverlässigkeit"}
+    {value: "Troubleshooting", label: "Troubleshooting"},
+    {value: "Independently", label: "Independently"},
+    {value: "Carefulness", label: "Carefulness"},
+    {value: "Teamplayer", label: "Teamplayer"},
+    {value: "Reliability", label: "Reliability"}
 ]
 const jobSkilloptions = [
     {value: "React", label: "React"}, {value: "JavaScript", label: "JavaScript"}, {value: "HTML5", label: "HTML5"}, {value: "Responsive Webdesign", label: "Responsive Webdesign"}, {value: "Visual Studio Code", label: "Visual Studio Code"}, {value: "Debugging", label: "Debugging"}
@@ -208,7 +208,7 @@ class UserDataForm extends Component {
                                                               
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                    Vorname
+                                                    First name
                                                         <input
                                                         required 
                                                         id={'userFirstName'} 
@@ -223,7 +223,7 @@ class UserDataForm extends Component {
                                                 </div>                               
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Nachname
+                                                        Last name
                                                             <input
                                                             required 
                                                             id={'userLastName'}  
@@ -242,7 +242,7 @@ class UserDataForm extends Component {
                                             
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Strasse
+                                                        Street
                                                         <input 
                                                             required
                                                             id={'userStreet'}  
@@ -257,7 +257,7 @@ class UserDataForm extends Component {
                                                 </div>
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Haus-Nr.
+                                                        House no.
                                                         <input
                                                             required 
                                                             id={'userHouseNumber'}
@@ -275,7 +275,7 @@ class UserDataForm extends Component {
                                             
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Postleitzahl
+                                                        Post Code
                                                         <input
                                                             required 
                                                             id={'userPostcode'}  
@@ -290,7 +290,7 @@ class UserDataForm extends Component {
                                                 </div>
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Stadt
+                                                        City
                                                         <input
                                                             required 
                                                             id={'userCity'}  
@@ -309,7 +309,7 @@ class UserDataForm extends Component {
                                             
                                                 <div className="col-6">
                                                     <div className="detailInfo">    
-                                                        Telefon
+                                                        Telephone
                                                     <input
                                                         required
                                                         id={'userPhoneNum'}
@@ -324,7 +324,7 @@ class UserDataForm extends Component {
                                                 </div>
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Mobiltelefon
+                                                        Mobilphone
                                                     <input
                                                         required
                                                         id={'userMobileNum'}
@@ -356,7 +356,7 @@ class UserDataForm extends Component {
                                                 </div>
                                                     <div className="col-4">
                                                         <div className="detailinfo">
-                                                            Nationalität
+                                                            Nationality
                                                             <Select
                                                                 className="nationality"
                                                                 options={nationality}
@@ -370,7 +370,7 @@ class UserDataForm extends Component {
                                                         </div>
                                                     </div>
                                             </div>
-                                            <div className="card-text">Geburtstag</div>
+                                            <div className="card-text">Day of birth</div>
                                             <div className="row">
                                             
                                                 <div className="col-3">
@@ -420,7 +420,7 @@ class UserDataForm extends Component {
                                                 
                                                 <div className="col-6">
                                                     <div className="detailInfo">
-                                                        Geburtsort
+                                                        Place of birth
                                                         <input
                                                             required 
                                                             id={'userPlaceOfBirth'} 
@@ -435,7 +435,7 @@ class UserDataForm extends Component {
                                                 </div>
                                                 <div className="col-5">
                                                     <div className="detailinfo">
-                                                        Beziehungstatus
+                                                        Marital Status
                                                         <Select 
                                                             className="maritalStatus"
                                                             options={maritalStatus}
@@ -458,7 +458,7 @@ class UserDataForm extends Component {
                     <div className="col-4">
                         <div className="card bg-info rounded-corners">
                             <form onSubmit={this.submitPersonalSkill}>
-                                <h4 className="card-header text-center">Persönliche Fähigkeiten</h4>
+                                <h4 className="card-header text-center">Personal Skills</h4>
                                     <div className="card-body">
                                         <section>
                                             <div className="row">               
@@ -577,7 +577,7 @@ class UserDataForm extends Component {
                     <div className="col-4">
                         <div className="card bg-info rounded-corners">
                             <form onSubmit={this.submitProfessionalSkill}>
-                                <h4 className="card-header text-center">Berufliche Fähigkeiten</h4>
+                                <h4 className="card-header text-center">Professional Skills</h4>
                                     <div className="card-body">
                                         <section>
                                             <div className="row">               

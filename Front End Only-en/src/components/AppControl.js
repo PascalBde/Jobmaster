@@ -157,11 +157,11 @@ class AppControl extends Component {
 
                 <Tabs>
                     <TabList>
-                        <Tab>Bewerberdaten</Tab>
-                        <Tab>Anschreiben</Tab>
-                        <Tab>Lebenslauf</Tab>
-                        <Tab>Anlagen</Tab>
-                        <Tab>Übersicht</Tab>
+                        <Tab>Applicant data</Tab>
+                        <Tab>Cover Letter</Tab>
+                        <Tab>Curricullum Vitae</Tab>
+                        <Tab>Attachments</Tab>
+                        <Tab>Overview</Tab>
                     </TabList>
                     <TabPanel>
                         <UserDataForm

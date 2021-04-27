@@ -77,27 +77,27 @@ class CoverLetter extends Component {
                     <div className="col-5">
                         <div className="card bg-info rounded-corners">
                             <form>
-                            <h4 className="card-header text-center">Bewerberdaten</h4>
+                            <h4 className="card-header text-center">Applicant data</h4>
                             <div className="card-body userInfoField">
                                 <div className="row">
                                     <div className="col-12">
                                         <div>
-                                            {(data && data.userData) ? data.userData.userFirstName : 'Keine Daten'} {(data && data.userData) ? data.userData.userLastName : 'Keine Daten'}  
+                                            {(data && data.userData) ? data.userData.userFirstName : 'No Data found! :('} {(data && data.userData) ? data.userData.userLastName : 'No Data found! :('}  
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userStreet : 'Keine Daten'} {(data && data.userData) ? data.userData.userHouseNumber : 'Keine Daten'}
+                                            {(data && data.userData) ? data.userData.userStreet : 'No Data found! :('} {(data && data.userData) ? data.userData.userHouseNumber : 'No Data found! :('}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userPostcode : 'Keine Daten'} {(data && data.userData) ? data.userData.userCity : 'Keine Daten'}
+                                            {(data && data.userData) ? data.userData.userPostcode : 'No Data found! :('} {(data && data.userData) ? data.userData.userCity : 'No Data found! :('}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userPhoneNum : 'Keine Daten'}
+                                            {(data && data.userData) ? data.userData.userPhoneNum : 'No Data found! :('}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userMobileNum : 'Keine Daten'}
+                                            {(data && data.userData) ? data.userData.userMobileNum : 'No Data found! :('}
                                         </div>
                                         <div>
-                                            {(data && data.userData) ? data.userData.userMailAdress : 'Keine Daten'}
+                                            {(data && data.userData) ? data.userData.userMailAdress : 'No Data found! :('}
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@ class CoverLetter extends Component {
                             
                                 <form>
                                 <h4 className="card-header text-center">
-                                    Arbeitgeberdaten
+                                    Employer data
                                 </h4>
                                 <div className="card-body">
                                 <section>     
@@ -118,7 +118,7 @@ class CoverLetter extends Component {
                                     <div className="offset-1" />                  
                                     <div className="col-5">
                                         <div className="detailInfo">
-                                            Firmenname
+                                            Company name
                                                 <input
                                                 required 
                                                 id={'nameOfCompany'} 
@@ -134,7 +134,7 @@ class CoverLetter extends Component {
                                     </div>                               
                                         <div className="col-5">
                                             <div className="detailInfo">
-                                                Ansprechpartner
+                                                Contact Person
                                                     <input 
                                                     id={'contactPerson'} 
                                                     placeholder={'Frau / Herr Petra / Peter Müller'} 
@@ -153,7 +153,7 @@ class CoverLetter extends Component {
                                         <div className="offset-1" />
                                         <div className="col-5">
                                             <div className="detailInfo">
-                                                Strasse
+                                                Street
                                                 <input 
                                                     required
                                                     id={'street'} 
@@ -169,7 +169,7 @@ class CoverLetter extends Component {
                                         </div>
                                         <div className="col-2">
                                             <div className="detailInfo">
-                                                Haus-Nr.
+                                                House no.
                                                 <input
                                                     required 
                                                     id={'housenumber'} 
@@ -190,7 +190,7 @@ class CoverLetter extends Component {
 
                                         <div className="col-3">
                                             <div className="detailInfo">
-                                                Postleitzahl
+                                                Post Code
                                                 <input
                                                     required 
                                                     id={'postcode'} 
@@ -207,7 +207,7 @@ class CoverLetter extends Component {
                                         <div className="offset-2" />
                                         <div className="col-5">
                                             <div className="detailInfo">
-                                                Stadt
+                                                City
                                                 <input
                                                     required 
                                                     id={'city'} 
@@ -259,14 +259,14 @@ class CoverLetter extends Component {
                     <div className="card rounded-corners bg-info">
                     <div className="card-body">
                     <form>
-                        <h4 className="card-header text-center">Stellenbezeichnung und Anschreibentext</h4>
+                        <h4 className="card-header text-center">Job title and cover text</h4>
                            
                                 
                                 
                             <div className="row">
                                 <div className="offset-3" />
                                 <div className="col-4">
-                                Betreff im Anschreiben 
+                                Subject in the cover letter 
                                 <input
                                     required 
                                     id={'jobDescription'} 
@@ -281,7 +281,7 @@ class CoverLetter extends Component {
                                 </div>
                                 </div>
                                 
-                                <p className="offset-3">Datum der Bewerbung</p>
+                                <p className="offset-3">Date of the application</p>
                                 
                                 <div className="row">
                                 
@@ -335,7 +335,7 @@ class CoverLetter extends Component {
                             <div className="offset-1" />
                             <div className="form-group">
                                 <div className="col-12">
-                                    Anschreibentext     
+                                    Cover text     
                                     <CKEditor
                                         editor={ ClassicEditor }
                                         config={{

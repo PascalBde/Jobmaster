@@ -231,7 +231,7 @@ class Final extends Component {
             <div className="final-container">
                 <div className="row">
                     <div className="col-12">
-                        <h2 className="finalHeader text-center">Übersicht deiner Bewerbung</h2>
+                        <h2 className="finalHeader text-center">Overview of your application</h2>
                         <button className={'button'} onClick={() => {
                             window.print();
                         }
@@ -240,7 +240,7 @@ class Final extends Component {
                 </div>
 
                 <section>
-                <h2 className="finalSectionHeader text-center">Anschreiben</h2>
+                <h2 className="finalSectionHeader text-center">Cover Letter</h2>
                     <div className="row">
                         <div className="offset-3" />
                         <div className="col-6">
@@ -349,7 +349,7 @@ class Final extends Component {
                 </section>
                 <hr className="final-line" />
                 <section>
-                <h2 className="finalSectionHeader text-center">Lebenslauf</h2>
+                <h2 className="finalSectionHeader text-center">Curricullum Vitae</h2>
                     <div className="row">
                         <div className="offset-3" />
                         <div className="col-6">
@@ -365,7 +365,7 @@ class Final extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-12">
-                                                        <p className="vitaUserSubHeader text-uppercase">Kontakt</p>
+                                                        <p className="vitaUserSubHeader text-uppercase">Contact</p>
                                                     </div>
                                                 </div>
                                                 <div className="row">
@@ -395,7 +395,7 @@ class Final extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-4">
-                                                        <p className="vitaText">Geburtstag:</p>
+                                                        <p className="vitaText">Date of birth:</p>
                                                     </div>
                                                     <div className="col-6">
                                                         <p>{final.userData.userDayOfBirth.label}.{final.userData.userMonthOfBirth.value}.{final.userData.userYearOfBirth.value}</p>
@@ -403,7 +403,7 @@ class Final extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-4">
-                                                        <p className="vitaText">Geburtsort:</p>  
+                                                        <p className="vitaText">Place of birth:</p>  
                                                     </div>
                                                     <div className="col-6">
                                                         <p>{final.userData.userPlaceOfBirth}</p>
@@ -411,7 +411,7 @@ class Final extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-4">
-                                                        <p className="vitaText">Nationalität:</p>  
+                                                        <p className="vitaText">Nationality:</p>  
                                                     </div>
                                                     <div className="col-6">
                                                         <p>{final.userData.userNationality.label}</p>
@@ -419,7 +419,7 @@ class Final extends Component {
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-4">
-                                                        <p className="vitaText">Familienstand:</p>
+                                                        <p className="vitaText">Marital Status:</p>
                                                     </div>
                                                     <div className="col-6">
                                                         <p>{final.userData.userMaritalStatus.label}</p>
@@ -429,7 +429,7 @@ class Final extends Component {
                                             <div className="card-body">                                            
                                             <div className="row">
                                                <div className="col-12">
-                                                    <p className="vitaUserSubHeader">Berufliche Skills</p>   
+                                                    <p className="vitaUserSubHeader">Professional Skills</p>   
                                                 </div> 
                                             </div>
                                             {vitaProfessionalSkills.length > 0 &&
@@ -442,7 +442,7 @@ class Final extends Component {
                                             <br />
                                             <div className="row">
                                                <div className="col-12">
-                                                    <p className="vitaUserSubHeader">Persönliche Skills</p>   
+                                                    <p className="vitaUserSubHeader">Personal Skills</p>   
                                                 </div> 
                                             </div>
                                             {vitaPersonalSkills.length > 0 &&
@@ -463,12 +463,12 @@ class Final extends Component {
                                             <div className="card-body">
                                             <div className="row">
                                         <div className="col-12">
-                                            <p className="card-header vitaUserHeader">Lebenslauf</p>
+                                            <p className="card-header vitaUserHeader">Curricullum Vitae</p>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-12">
-                                            <p className="vitaUserSubHeader">Beruflicher Werdegang</p>
+                                            <p className="vitaUserSubHeader">Professional background</p>
                                         </div>
                                     </div>
                                     {vitaEntriesJob.length > 0 &&
@@ -481,7 +481,7 @@ class Final extends Component {
                                     <br />
                                     <div className="row">
                                         <div className="col-12">
-                                            <p className="vitaUserSubHeader">Ausbildung</p>
+                                            <p className="vitaUserSubHeader">Professional Education</p>
                                         </div>
                                     </div>
                                     {vitaEntriesEducation.length > 0 &&
@@ -494,7 +494,7 @@ class Final extends Component {
                                     <br />
                                     <div className="row">
                                         <div className="col-12">
-                                            <p className="vitaUserSubHeader">Schulische Bildung</p>
+                                            <p className="vitaUserSubHeader">School Education</p>
                                         </div>
                                     </div>
                                     {vitaEntriesSchool.length > 0 &&
@@ -507,7 +507,7 @@ class Final extends Component {
                                     <br />
                                     <div className="row">
                                         <div className="col-12">
-                                            <p className="vitaUserSubHeader">Praktika</p>
+                                            <p className="vitaUserSubHeader">Practical Trainings</p>
                                         </div>
                                     </div>
                                     {vitaEntriesPractice.length > 0 &&
@@ -529,7 +529,7 @@ class Final extends Component {
                 </section>
                 <hr className="final-line" />
                 <section>
-                    <h2 className="finalSectionHeader text-center">Anhänge</h2>
+                    <h2 className="finalSectionHeader text-center">Attachments</h2>
                 </section>
                 <hr className="final-line" />
                 <section>
@@ -540,7 +540,7 @@ class Final extends Component {
                 <button
                 className="sendMail btn-block mb-5"
                 type="submit"
-                >Bewerbung abschicken</button>
+                >Submit application</button>
                 
                 </div>
                 </div>

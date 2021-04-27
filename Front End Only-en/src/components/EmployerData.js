@@ -21,13 +21,13 @@ class EmployerData extends Component {
                         <form className="employerform">
                             <div className="col-12">
                                 <h3 className="employerHeader">
-                                    Arbeitgeberdaten
+                                    Employer data
                                 </h3>
                             </div> 
                                 <section>                                
                                     <div className="col-12">
                                         <div className="detailInfo">
-                                            Firmenname
+                                            Company name
                                                 <input 
                                                 id={'nameOfCompany'} 
                                                 placeholder={'Musterfirma GmbH'} 
@@ -42,7 +42,7 @@ class EmployerData extends Component {
                                     </div>                                
                                         <div className="col-8">
                                             <div className="detailInfo">
-                                                Ansprechpartner
+                                                Contact Person
                                                     <input 
                                                     id={'contactPerson'} 
                                                     placeholder={'Frau / Herr Petra / Peter Müller'} 
@@ -57,7 +57,7 @@ class EmployerData extends Component {
                                         </div>
                                         <div className="col-12">
                                             <div className="detailInfo">
-                                                Strasse
+                                                Street
                                                 <input 
                                                     id={'street'} 
                                                     placeholder={'Musterstrasse'} 
@@ -72,7 +72,7 @@ class EmployerData extends Component {
                                         </div>
                                         <div className="col-2">
                                             <div className="detailInfo">
-                                                Hausnummer
+                                                House no.
                                                 <input 
                                                     id={'housenumber'} 
                                                     placeholder={'123'} 
@@ -87,7 +87,7 @@ class EmployerData extends Component {
                                         </div> 
                                         <div className="col-3">
                                             <div className="detailInfo">
-                                                Postleitzahl
+                                                Post Code
                                                 <input 
                                                     id={'postcode'} 
                                                     placeholder={'12345'} 
@@ -102,7 +102,7 @@ class EmployerData extends Component {
                                         </div>
                                         <div className="col-12">
                                             <div className="detailInfo">
-                                                Stadt
+                                                City
                                                 <input 
                                                     id={'city'} 
                                                     placeholder={'Berlin / Hamburg / ...'} 

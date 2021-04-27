@@ -200,7 +200,7 @@ class Vita extends Component {
     this.props.onUpdate({practices});
     }
 
-    render() {
+    rendr() {
         const vitaData = this.props.data;
         const entriesJob = vitaData.jobs;
         const entriesSchool = vitaData.schools;
@@ -214,13 +214,13 @@ class Vita extends Component {
                 <div className="row">
                     <div className="col-3">
                         <div className="card bg-info">
-                        <h4 className="card-header text-center">Beruflicher Werdegang</h4>
+                        <h4 className="card-header text-center">Professional background</h4>
                             <div className="card-body">                        
                                 <form onSubmit={this.submitJob}>
-                                    <h4 className="selectLabel">Beginn:</h4>
+                                    <h4 className="selectLabel">Start:</h4>
                                         <div className="row">
                                         <div className="offset-1" />
-                                            <h3 className="monthSelect">Monat:</h3>
+                                            <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select 
                                             placeholder=""
@@ -233,7 +233,7 @@ class Vita extends Component {
                                             }}
                                         />
                                     </div>
-                                    <h3 className="yearSelect">Jahr:</h3>
+                                    <h3 className="yearSelect">Year:</h3>
                                     <div className="col-4">
                                         <Select 
                                             placeholder=""
@@ -248,10 +248,10 @@ class Vita extends Component {
                                     </div>
                                 </div>
                                 <hr />
-                                <h4 className="selectLabel">Ende:</h4>
+                                <h4 className="selectLabel">End:</h4>
                                 <div className="row">
                                 <div className="offset-1" />
-                                    <h3 className="monthSelect">Monat:</h3>
+                                    <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select 
                                             placeholder=""
@@ -264,7 +264,7 @@ class Vita extends Component {
                                             }}
                                         />
                                         </div>
-                                        <h3 className="yearSelect">Jahr:</h3>
+                                        <h3 className="yearSelect">Year:</h3>
                                         <div className="col-4">
                                         <Select 
                                             placeholder=""
@@ -279,20 +279,20 @@ class Vita extends Component {
                                         </div>
                                 </div>
                                 <hr />
-                                    <h4 className="selectLabel">Firma:</h4>
+                                    <h4 className="selectLabel">Company:</h4>
                                     <input
                                         required
                                         className="form-control"
                                         type="text"
                                         value={this.props.company}
                                         name="company"
-                                        placeholder="  Name der Firma"
+                                        placeholder="  Name of Company"
                                         onChange={(event)=>{
                                             this.props.onUpdate('company', event.target.value);
                                         }}
                                     />
                                 <br />
-                                    <h4 className="selectLabel">als:</h4>
+                                    <h4 className="selectLabel">as:</h4>
                                         <input
                                             required
                                             className="form-control"
@@ -307,7 +307,7 @@ class Vita extends Component {
                                 <button  
                                     type="submit"
                                     className="addVitaEntryButton btn-block mt-3"
-                                >Eintrag hinzufügen
+                                >Add Entry
                                 </button>
                                 <div className="offset-2" />
                             </form>
@@ -316,13 +316,13 @@ class Vita extends Component {
                             </div>
                     <div className="col-3">
                         <div className="card bg-info">
-                        <h4 className="card-header text-center">Ausbildung</h4>
+                        <h4 className="card-header text-center">Professional Education</h4>
                             <div className="card-body">
                                 <form onSubmit={this.submitEducation}>
-                                <h4 className="selectLabel">Beginn:</h4>
+                                <h4 className="selectLabel">Start:</h4>
                                         <div className="row">
                                         <div className="offset-1" />
-                                            <h3 className="monthSelect">Monat:</h3>
+                                            <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select 
                                             placeholder=""
@@ -335,7 +335,7 @@ class Vita extends Component {
                                             }}
                                         />
                                     </div>
-                                    <h3 className="yearSelect">Jahr:</h3>
+                                    <h3 className="yearSelect">Year:</h3>
                                     <div className="col-4">
                                         <Select 
                                             placeholder=""
@@ -350,10 +350,10 @@ class Vita extends Component {
                                     </div>
                                 </div>
                                 <hr />
-                                <h4 className="selectLabel">Ende:</h4>
+                                <h4 className="selectLabel">End:</h4>
                                 <div className="row">
                                 <div className="offset-1" />
-                                    <h3 className="monthSelect">Monat:</h3>
+                                    <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select
                                             placeholder=""
@@ -367,7 +367,7 @@ class Vita extends Component {
                                             }}
                                         />
                                         </div>
-                                        <h3 className="yearSelect">Jahr:</h3>
+                                        <h3 className="yearSelect">Year:</h3>
                                         <div className="col-4">
                                         <Select
                                             placeholder=""
@@ -383,7 +383,7 @@ class Vita extends Component {
                                     </div>
                                 </div>
                                 <hr />
-                                    <h4 className="selectLabel">Firma:</h4>
+                                    <h4 className="selectLabel">Company:</h4>
                                         <input
                                             required
                                             className="form-control"
@@ -396,7 +396,7 @@ class Vita extends Component {
                                             }}
                                         />
                                 <br />
-                                    <h4 className="selectLabel">Abschluss:</h4>
+                                    <h4 className="selectLabel">Graduation:</h4>
                                         <input
                                             required
                                             className="form-control"
@@ -411,7 +411,7 @@ class Vita extends Component {
                                     <button 
                                             className="addVitaEntryButton btn-block mt-3" 
                                             type="submit"
-                                        >Eintrag hinzufügen
+                                        >Add Entry
                                         </button>
                                     </form>
                                     </div>
@@ -419,15 +419,15 @@ class Vita extends Component {
                                     </div>
                     <div className="col-3">
                         <div className="card bg-info">
-                        <h4 className="card-header text-center">Schulische Bildung</h4>
+                        <h4 className="card-header text-center">School Education</h4>
                             <div className="row">
                             <div className="col-12">
                             <div className="card-body">
                                 <form onSubmit={this.submitSchool}>
-                                <h4 className="selectLabel">Beginn:</h4>
+                                <h4 className="selectLabel">Start:</h4>
                                         <div className="row">
                                         <div className="offset-1" />
-                                            <h3 className="monthSelect">Monat:</h3>
+                                            <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select 
                                             placeholder=""
@@ -440,7 +440,7 @@ class Vita extends Component {
                                             }}
                                         />
                                     </div>
-                                    <h3 className="yearSelect">Jahr:</h3>
+                                    <h3 className="yearSelect">Year:</h3>
                                     <div className="col-4">
                                         <Select
                                             placeholder=""
@@ -455,10 +455,10 @@ class Vita extends Component {
                                     </div>
                                 </div>
                                 <hr />
-                                <h4 className="selectLabel">Ende:</h4>
+                                <h4 className="selectLabel">End:</h4>
                                 <div className="row">
                                 <div className="offset-1" />
-                                    <h3 className="monthSelect">Monat:</h3>
+                                    <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select 
                                             placeholder=""
@@ -471,7 +471,7 @@ class Vita extends Component {
                                             }}
                                         />
                                         </div>
-                                        <h3 className="yearSelect">Jahr:</h3>
+                                        <h3 className="yearSelect">Year:</h3>
                                         <div className="col-4">
                                         <Select
                                             placeholder=""
@@ -499,7 +499,7 @@ class Vita extends Component {
                                                     }}
                                                 />
                                         <br />
-                                            <h4 className="selectLabel">Abschluss:</h4>
+                                            <h4 className="selectLabel">Graduation:</h4>
                                                 <input
                                                     required
                                                     className="form-control"
@@ -514,7 +514,7 @@ class Vita extends Component {
                                     <button 
                                             className="addVitaEntryButton btn-block mt-3" 
                                             type="submit"
-                                        >Eintrag hinzufügen
+                                        >Add Entry
                                         </button>
                                 </form>
                             </div>
@@ -524,15 +524,15 @@ class Vita extends Component {
                     </div>
                     <div className="col-3">
                         <div className="card bg-info">
-                        <h4 className="card-header text-center">Praktika</h4>
+                        <h4 className="card-header text-center">Practical Trainings</h4>
                             <div className="row">
                             <div className="col-12">
                             <div className="card-body">
                                 <form onSubmit={this.submitPractice}>
-                                <h4 className="selectLabel">Beginn:</h4>
+                                <h4 className="selectLabel">Start:</h4>
                                         <div className="row">
                                         <div className="offset-1" />
-                                            <h3 className="monthSelect">Monat:</h3>
+                                            <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select 
                                             placeholder=""
@@ -545,7 +545,7 @@ class Vita extends Component {
                                             }}
                                         />
                                     </div>
-                                    <h3 className="yearSelect">Jahr:</h3>
+                                    <h3 className="yearSelect">Year:</h3>
                                     <div className="col-4">
                                         <Select
                                             placeholder="" 
@@ -560,10 +560,10 @@ class Vita extends Component {
                                     </div>
                                 </div>
                                 <hr />
-                                <h4 className="selectLabel">Ende:</h4>
+                                <h4 className="selectLabel">End:</h4>
                                 <div className="row">
                                 <div className="offset-1" />
-                                    <h3 className="monthSelect">Monat:</h3>
+                                    <h3 className="monthSelect">Month:</h3>
                                     <div className="col-3">
                                         <Select
                                             placeholder="" 
@@ -576,7 +576,7 @@ class Vita extends Component {
                                             }}
                                         />
                                         </div>
-                                        <h3 className="yearSelect">Jahr:</h3>
+                                        <h3 className="yearSelect">Year:</h3>
                                         <div className="col-4">
                                         <Select
                                             placeholder="" 
@@ -591,7 +591,7 @@ class Vita extends Component {
                                         </div>
                                 </div>
                                 <hr />
-                                            <h4 className="selectLabel">Firma:</h4>
+                                            <h4 className="selectLabel">Company:</h4>
                                                 <input
                                                     required
                                                     className="form-control"
@@ -604,7 +604,7 @@ class Vita extends Component {
                                                     }}
                                                 />
                                             <br />
-                                            <h4 className="selectLabel">Berufsfeld:</h4>
+                                            <h4 className="selectLabel">Occupational field:</h4>
                                                 <input
                                                     required
                                                     className="form-control"
@@ -621,7 +621,7 @@ class Vita extends Component {
                                         <button 
                                             className="addVitaEntryButton btn-block mt-3" 
                                             type="submit"
-                                        >Eintrag hinzufügen
+                                        >Add Entry
                                         </button>
                                     </form>
                                     </div>

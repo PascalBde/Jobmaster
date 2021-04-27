@@ -66,10 +66,10 @@ class Attachments extends Component {
 
         return (
             <div>
-                <h2>Zeugnisse und Zertifikate der Bewerbung hinzufügen</h2>
+                <h2>Add references and certificates to the application</h2>
                 <div>
                     <Upload {...uploaderProps}>
-                        <Button>Hinzufügen
+                        <Button>Add
                             {isUploading &&
                         <LoadingIndicator />
                         }
