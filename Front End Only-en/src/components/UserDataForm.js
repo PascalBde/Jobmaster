@@ -201,7 +201,7 @@ class UserDataForm extends Component {
                     <div className="col-4">
                         <div className="card bg-info rounded-corners">
                             <form>
-                                <h4 className="card-header text-center">Persönliche Angaben</h4>
+                                <h4 className="card-header text-center">Personal Data</h4>
                                     <div className="card-body">
                                         <section>     
                                             <div className="row">         
@@ -554,7 +554,7 @@ class UserDataForm extends Component {
                                                     <button
                                                         type="submit"
                                                         className="addSkillEntryButton mt-1"
-                                                    >Eintragen
+                                                    >Add Skill
                                                     </button>
                                                 </div>
                                             </div>
@@ -673,7 +673,7 @@ class UserDataForm extends Component {
                                                     <button
                                                         type="submit"
                                                         className="addSkillEntryButton mt-1"
-                                                    >Eintragen
+                                                    >Add Skill
                                                     </button>
                                                 </div>
                                             </div>
