@@ -15,9 +15,6 @@ class SkillEntry extends Component {
         return(
             <div>
                 <div className="row">
-
-                    
-                   
                         <div className="mt-2">
                         {skill.userPersonalSkillName || skill.userProfessionalSkillName}: 
                         </div>

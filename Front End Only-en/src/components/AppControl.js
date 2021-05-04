@@ -11,7 +11,7 @@ import Vita from "./Vita";
 import CoverLetter from "./CoverLetter";
 import Attachments from "./Attachments";
 import Final from "./Final";
-
+import Jobmaster_Logo_klein from "./Jobmaster_Logo_klein.png"
 
 
 //import 'bootstrap/dist/css/bootstrap.min.css'
@@ -120,7 +120,12 @@ class AppControl extends Component {
 
     render() {
         return (
-            <div id="app">                
+            <div id="app">
+                <div className="row mb-3">
+                    <div className="col-12">
+                        <img className="appLogo" src={Jobmaster_Logo_klein} alt="" />
+                    </div>
+                </div>                    
                 <div className="row mb-3">
                     <div className="col-12">
                         <button className={'button'} onClick={async () => {
