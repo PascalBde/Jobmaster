@@ -15,13 +15,10 @@ class SkillEntry extends Component {
         return(
             <div>
                 <div className="row">
-
-                    
-                   
-                        <div className="mt-2">
+                        <p className="mt-2">
                         {skill.userPersonalSkillName || skill.userProfessionalSkillName}: 
-                        </div>
-                        <div className="ml-1">
+                        </p>
+                        <p className="ml-1">
                         <ReactStars 
                             count={skill.userPersonalSkillValue || skill.userProfessionalSkillValue}
                             color1="#ffc412"
@@ -29,7 +26,7 @@ class SkillEntry extends Component {
                             edit={false}
                             half={false}
                         />
-                        </div>
+                        </p>
                         <XCircle className="skillDeleteButton mt-2 offset-1" onClick={()=>{
                         this.props.deleteEntry(this.props.entryIndex);
                     }}/>

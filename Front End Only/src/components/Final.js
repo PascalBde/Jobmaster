@@ -22,21 +22,21 @@ class Final extends Component {
             for (const vitaPersonalSkill of final.userData.userPersonalSkills) {
                 vitaPersonalSkills.push(
                     <div>
-                        
                         <div className="row">
-                        <div className="vitaText col-12">
-                        {vitaPersonalSkill.userPersonalSkillName}: <ReactStars
-                            className="ml-1" 
+                        <p className="mt-2">
+                        {vitaPersonalSkill.userPersonalSkillName}: 
+                        </p>
+                        <p className="ml-1">
+                        <ReactStars 
                             count={vitaPersonalSkill.userPersonalSkillValue}
                             color1="#ffc412"
                             size={24}
                             edit={false}
                             half={false}
                         />
+                        </p>
                         </div>
-                        
-                        </div>
-                        <br />
+                    <br />
                     </div>
                 )
             }
@@ -49,16 +49,18 @@ class Final extends Component {
                 vitaProfessionalSkills.push(
                     <div>
                         <div className="row">
-                        <div className="vitaText col-12">
-                        {vitaProfessionalSkill.userProfessionalSkillName}: <ReactStars
-                            className="ml-1" 
+                        <p className="mt-2">
+                        {vitaProfessionalSkill.userProfessionalSkillName}: 
+                        </p>
+                        <p className="ml-1">
+                        <ReactStars 
                             count={vitaProfessionalSkill.userProfessionalSkillValue}
                             color1="#ffc412"
                             size={24}
                             edit={false}
                             half={false}
                         />
-                        </div>
+                        </p>
                         </div>
                     </div>
                 )
@@ -435,7 +437,7 @@ class Final extends Component {
                                             {vitaProfessionalSkills.length > 0 &&
                                                 <div className="row">
                                                     <div className="col-12">
-                                                        <div>{vitaProfessionalSkills}</div>
+                                                        <p>{vitaProfessionalSkills}</p>
                                                     </div>
                                                 </div>    
                                             }
@@ -448,7 +450,7 @@ class Final extends Component {
                                             {vitaPersonalSkills.length > 0 &&
                                                 <div className="row">
                                                     <div className="col-12">
-                                                        <div>{vitaPersonalSkills}</div>
+                                                        <p>{vitaPersonalSkills}</p>
                                                     </div>
                                                 </div>    
                                             }
