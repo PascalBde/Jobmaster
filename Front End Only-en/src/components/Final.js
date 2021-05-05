@@ -50,11 +50,11 @@ class Final extends Component {
                     <div>
                         <div className="row">
                         <p className="mt-2">
-                        {vitaPersonalSkill.userPersonalSkillName}: 
+                        {vitaProfessionalSkill.userProfessionalSkillName}: 
                         </p>
                         <p className="ml-1">
                         <ReactStars 
-                            count={vitaPersonalSkill.userPersonalSkillValue}
+                            count={vitaProfessionalSkill.userProfessionalSkillValue}
                             color1="#ffc412"
                             size={24}
                             edit={false}
