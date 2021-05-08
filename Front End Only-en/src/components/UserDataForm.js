@@ -213,7 +213,7 @@ class UserDataForm extends Component {
                                                         <input
                                                         required 
                                                         id={'userFirstName'} 
-                                                        value={this.props.userFirstName} 
+                                                        value={userFormData.userFirstName} 
                                                         type="text" 
                                                         className="form-control" 
                                                         onChange={(event)=>{
@@ -228,7 +228,7 @@ class UserDataForm extends Component {
                                                             <input
                                                             required 
                                                             id={'userLastName'}  
-                                                            value={this.props.userLastName} 
+                                                            value={userFormData.userLastName} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -247,7 +247,7 @@ class UserDataForm extends Component {
                                                         <input 
                                                             required
                                                             id={'userStreet'}  
-                                                            value={this.props.userStreet} 
+                                                            value={userFormData.userStreet} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -262,7 +262,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userHouseNumber'}
-                                                            value={this.props.userHouseNumber} 
+                                                            value={userFormData.userHouseNumber} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -280,7 +280,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userPostcode'}  
-                                                            value={this.props.userPostcode} 
+                                                            value={userFormData.userPostcode} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -295,7 +295,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userCity'}  
-                                                            value={this.props.userCity} 
+                                                            value={userFormData.userCity} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -314,7 +314,7 @@ class UserDataForm extends Component {
                                                     <input
                                                         required
                                                         id={'userPhoneNum'}
-                                                        value={this.props.userPhoneNum}
+                                                        value={userFormData.userPhoneNum}
                                                         type="text"
                                                         className="form-control"
                                                         onChange={(event)=>{
@@ -329,7 +329,7 @@ class UserDataForm extends Component {
                                                     <input
                                                         required
                                                         id={'userMobileNum'}
-                                                        value={this.props.userMobileNum}
+                                                        value={userFormData.userMobileNum}
                                                         type="text"
                                                         className="form-control"
                                                         onChange={(event)=>{
@@ -346,7 +346,7 @@ class UserDataForm extends Component {
                                                     <input
                                                         required
                                                         id={'userMailAdress'}
-                                                        value={this.props.userMailAdress}
+                                                        value={userFormData.userMailAdress}
                                                         type="text"
                                                         className="form-control"
                                                         onChange={(event)=>{
@@ -361,7 +361,7 @@ class UserDataForm extends Component {
                                                             <Select
                                                                 className="nationality"
                                                                 options={nationality}
-                                                                value={this.props.userNationality}
+                                                                value={userFormData.userNationality}
                                                                 name="nationality"
                                                                 onChange={(value)=>{
                                                                 this.props.onUpdate('userNationality', value);
@@ -379,7 +379,7 @@ class UserDataForm extends Component {
                                                         <Select
                                                             className="bDays"
                                                             options={bDays}
-                                                            value={this.props.userDayOfBirth}
+                                                            value={userFormData.userDayOfBirth}
                                                             name="bDays"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userDayOfBirth', value);
@@ -393,7 +393,7 @@ class UserDataForm extends Component {
                                                         <Select
                                                             className="bMonths"
                                                             options={bMonths}
-                                                            value={this.props.userMonthOfBirth}
+                                                            value={userFormData.userMonthOfBirth}
                                                             name="bMonths"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userMonthOfBirth', value);
@@ -407,7 +407,7 @@ class UserDataForm extends Component {
                                                         <Select
                                                             className="bYears"
                                                             options={bYears}
-                                                            value={this.props.userYearOfBirth}
+                                                            value={userFormData.userYearOfBirth}
                                                             name="bYears"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userYearOfBirth', value);
@@ -425,7 +425,7 @@ class UserDataForm extends Component {
                                                         <input
                                                             required 
                                                             id={'userPlaceOfBirth'} 
-                                                            value={this.props.userPlaceOfBirth} 
+                                                            value={userFormData.userPlaceOfBirth} 
                                                             type="text" 
                                                             className="form-control" 
                                                             onChange={(event)=>{
@@ -440,7 +440,7 @@ class UserDataForm extends Component {
                                                         <Select 
                                                             className="maritalStatus"
                                                             options={maritalStatus}
-                                                            value={this.props.userMaritalStatus}
+                                                            value={userFormData.userMaritalStatus}
                                                             name="maritalStatus"
                                                             onChange={(value)=>{
                                                             this.props.onUpdate('userMaritalStatus', value);
