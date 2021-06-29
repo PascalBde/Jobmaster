@@ -135,7 +135,6 @@ class UserDataForm extends Component {
             userPersonalSkillValue,
             userPersonalSkills
         } = this.props.data;
-        userPersonalSkillName = userPersonalSkillName.label;
 
         userPersonalSkills.push({
             userPersonalSkillName,
@@ -153,7 +152,6 @@ class UserDataForm extends Component {
             userProfessionalSkillValue,
             userProfessionalSkills
         } = this.props.data;
-        userProfessionalSkillName = userProfessionalSkillName.label;
         
         userProfessionalSkills.push({
             userProfessionalSkillName,

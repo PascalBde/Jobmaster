@@ -6,6 +6,7 @@ import LoadIcon from 'react-feather/dist/icons/upload-cloud';
 // import moment from 'moment';
 import 'moment/locale/de';
 
+import Start from "./Start"
 import UserDataForm from "./UserDataForm";
 import Vita from "./Vita";
 import CoverLetter from "./CoverLetter";
@@ -101,7 +102,10 @@ class AppControl extends Component {
                     pacticeCompany: "",
                     profession: ""
                 },
-                attachments: {},
+                attachments: {
+                    selectedFile: "",
+                    uploadedFiles: []
+                },
             }
         }
         
@@ -162,12 +166,16 @@ class AppControl extends Component {
 
                 <Tabs>
                     <TabList>
+                        <Tab>Start</Tab>
                         <Tab>Bewerberdaten</Tab>
                         <Tab>Anschreiben</Tab>
                         <Tab>Lebenslauf</Tab>
                         <Tab>Anlagen</Tab>
                         <Tab>Übersicht</Tab>
                     </TabList>
+                    <TabPanel>
+                        <Start />
+                    </TabPanel>
                     <TabPanel>
                         <UserDataForm
                             data={this.state.final.userData}

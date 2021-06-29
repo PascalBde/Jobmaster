@@ -8,19 +8,20 @@
 }
 
 .accordionHeader {
-    background-color: rgba(43, 133, 207, 0.1);
-    border-bottom: 1px solid rgb(43, 134, 207);
-    color: white;
-    padding-left: 3px;
+    background-color: rgba(43, 133, 207, 0.1) !important;
+    border: 3px solid skyblue !important;
+    color: #080142 !important;
+    padding-left: 3px !important;
 }
 
 .accordionHeader p {
-    color: rgb(43, 134, 207);
+    color: skyblue;
     margin-top: 10px;
 }
 
 .accordionPanel {
     outline: 0;
+    background-color: #080142;
 }
 
 .container-fluid {
@@ -458,4 +459,28 @@ textarea {
 .appLogo {
     max-width: 280px;
     max-height: 105px;
+}
+
+.infoText {
+    color: skyblue !important;
+    font-size: 20px !important;
+}
+
+.acctitle {
+    margin-bottom: 0rem !important;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: skyblue !important;
+}
+
+.startHeader {
+    font-size: 48px !important;
+    font-weight: 600 !important;
+}
+
+.accordionArea {
+    background-color: #0d0368 !important;
+    border-radius: 10px !important;
+    border-width: 3px !important;
+    border-color: skyblue !important;
 }

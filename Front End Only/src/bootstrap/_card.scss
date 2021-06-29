@@ -9,7 +9,7 @@
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: $card-height;
   word-wrap: break-word;
-  background-color: $card-bg;
+  background-color: $card-bg ;
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
@@ -80,6 +80,7 @@
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
   font-weight: bold;
+  font-size: 28px;
 
   &:first-child {
     @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
@@ -263,20 +264,27 @@
 //
 
 .accordion {
+  
   > .card {
     overflow: hidden;
+    background-color: #080142;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: skyblue;
+    
 
     &:not(:last-of-type) {
-      border-bottom: 0;
-      @include border-bottom-radius(0);
+      border-bottom: 3px;
+      @include border-bottom-radius(10);
     }
 
     &:not(:first-of-type) {
-      @include border-top-radius(0);
+      @include border-top-radius(10);
     }
 
     > .card-header {
-      @include border-radius(0);
+      @include border-radius(10);
+      border-width: 3px;
       margin-bottom: -$card-border-width;
     }
   }

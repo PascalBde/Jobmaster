@@ -24,7 +24,7 @@ class Final extends Component {
                     <div>
                         <div className="row">
                         <p className="mt-2">
-                        {vitaPersonalSkill.userPersonalSkillName}: 
+                        {vitaPersonalSkill.userSkillPersonalName}: 
                         </p>
                         <p className="ml-1">
                         <ReactStars 
@@ -50,7 +50,7 @@ class Final extends Component {
                     <div>
                         <div className="row">
                         <p className="mt-2">
-                        {vitaProfessionalSkill.userProfessionalSkillName}: 
+                        {vitaProfessionalSkill.userSkillProfessionalName}: 
                         </p>
                         <p className="ml-1">
                         <ReactStars 

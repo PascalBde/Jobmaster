@@ -16,7 +16,7 @@ class SkillEntry extends Component {
             <div>
                 <div className="row">
                         <p className="mt-2">
-                        {skill.userPersonalSkillName || skill.userProfessionalSkillName}: 
+                        {skill.userSkillPersonalName || skill.userSkillProfessionalName}: 
                         </p>
                         <p className="ml-1">
                         <ReactStars 

@@ -1,85 +1,66 @@
-import React, {Component} from "react"
-import Upload from "rc-upload/lib/Upload";
+import React, {Component} from "react";
 import {Button} from "react-bootstrap";
-import LoadingIndicator from "./LoadingIndicator";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 class Attachments extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            isUploading: false
-        }
+        this.state = {}
 
-        this.isUploadingToast = null;
+        this.onFileChange = this.onFileChange.bind(this);
+        this.onFileUpload = this.onFileUpload.bind(this);
     }
 
+    onFileChange(event, key) {
+        this.setState({
+            [key]: event.target.files[0]
+        });
+    };
+
+    onFileUpload(event) {
+        event.preventDefault();
+
+        let {
+            selectedFile,
+            uploadedFiles
+        } = this.props.data;
+
+        uploadedFiles.push({
+            selectedFile
+        });
+        console.log(uploadedFiles)
+        this.props.onUpdate({uploadedFiles})
+    };
+
+    
+
     render() {
-
-        const {isUploading} = this.state;
-        const uploaderProps = {
-            action: 'http://localhost/pascal_be/upload.php/upload',
-            data: { a: 1, b: 2 },
-            multiple: true,
-            beforeUpload: (file) => {
-                console.log('beforeUpload', file.name);
-            },
-            onStart: (file) => {
-                console.log('onStart', file.name);
-                this.setState({isUploading: true});
-                this.isUploadingToast = toast.info('Datei wird hochgeladen...', {
-                    position: "top-center",
-                    autoClose: false,
-                    hideProgressBar: true,
-                    closeOnClick: false,
-                    pauseOnHover: true,
-                    draggable: false,
-                    progress: undefined,
-                });
-            },
-            onSuccess: (file) => {
-                console.log('onSuccess', file);
-
-                this.setState({isUploading: false});
-                toast.dismiss(this.isUploadingToast);
-
-                toast.success('Dateiupload erfolgreich.', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: false,
-                    progress: undefined,
-                });
-            },
-            onProgress: (step, file) => {
-                console.log('onProgress', Math.round(step.percent), file.name);
-            },
-            onError: (err) => {
-                console.log('onError', err);
-
-                this.setState({isUploading: false});
-            },
-        };
+        const fileData = this.props.data;
+        let fileView = fileData.uploadedFiles;
 
         return (
             <div>
                 <h2>Zeugnisse und Zertifikate der Bewerbung hinzufügen</h2>
                 <div>
-                    <Upload {...uploaderProps}>
-                        <Button>Hinzufügen
-                            {isUploading &&
-                        <LoadingIndicator />
-                        }
-                        </Button>
-                    </Upload>
-                    <ToastContainer />
+                    <form onSubmit={this.onFileUpload}>
+                    <input 
+                    type="file"
+                    id={'selectedFile'}
+                    style={{color: "skyblue", borderRadius: "10px"}}
+                    onChange={(event)=>{
+                    this.props.onUpdate(event.target.id, event.target.files[0])
+                    }} />
+                    <Button type="submit">
+                        Datei hochladen
+                    </Button>
+                    </form>
+                </div>
+                <div>
+                <img src={fileView.File} alt="" />
                 </div>
             </div>
         );
     }
-}
+}   
 
 export default Attachments

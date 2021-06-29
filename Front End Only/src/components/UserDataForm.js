@@ -78,22 +78,7 @@ const bYears = [
         {value: "1980", label: "1980"}, {value: "1979", label: "1979"}, {value: "1978", label: "1978"}, {value: "1977", label: "1977"}, {value: "1976", label: "1976"},
         {value: "1975", label: "1975"}, {value: "1974", label: "1974"}, {value: "1972", label: "1972"}, {value: "1971", label: "1971"}, {value: "1970", label: "1970"},
 ]
-const personalSkilloptions = [
-    {value: "Akkurat", label: "Akkurat" }, 
-    {value: "Analyse", label: "Analyse"}, 
-    {value: "Belastbarkeit", label: "Belastbarkeit"}, 
-    {value: "Kommunikativ", label: "Kommunikativ"},
-    {value: "Lernbereitschaft", label: "Lernbereitschaft"},
-    {value: "Motivation", label: "Motivation"},
-    {value: "Problemlösung", label: "Problemlösung"},
-    {value: "Selbstständig", label: "Selbstständig"},
-    {value: "Sorgfalt", label: "Sorgfalt"},
-    {value: "Teamfähigkeit", label: "Teamfähigkeit"},
-    {value: "Zuverlässigkeit", label: "Zuverlässigkeit"}
-]
-const jobSkilloptions = [
-    {value: "React", label: "React"}, {value: "JavaScript", label: "JavaScript"}, {value: "HTML5", label: "HTML5"}, {value: "Responsive Webdesign", label: "Responsive Webdesign"}, {value: "Visual Studio Code", label: "Visual Studio Code"}, {value: "Debugging", label: "Debugging"}
-]
+
 
 class UserDataForm extends Component {
     constructor(props) {
@@ -130,14 +115,13 @@ class UserDataForm extends Component {
         event.preventDefault();
 
         let {
-            userPersonalSkillName,
+            userSkillPersonalName,
             userPersonalSkillValue,
             userPersonalSkills
         } = this.props.data;
-        userPersonalSkillName = userPersonalSkillName.label;
 
         userPersonalSkills.push({
-            userPersonalSkillName,
+            userSkillPersonalName,
             userPersonalSkillValue,
         });
         console.log(userPersonalSkills)
@@ -148,14 +132,13 @@ class UserDataForm extends Component {
         event.preventDefault();
 
         let {
-            userProfessionalSkillName,
+            userSkillProfessionalName,
             userProfessionalSkillValue,
             userProfessionalSkills
         } = this.props.data;
-        userProfessionalSkillName = userProfessionalSkillName.label;
         
         userProfessionalSkills.push({
-            userProfessionalSkillName,
+            userSkillProfessionalName,
             userProfessionalSkillValue
         });
         console.log(userProfessionalSkills)
@@ -463,18 +446,18 @@ class UserDataForm extends Component {
                                         <section>
                                             <div className="row">               
                                                 <div className="col-5">
-                                                    <div className="detailinfo">
-                                                        <Select
-                                                            className="personalSkilloptions"
-                                                            options={personalSkilloptions}
-                                                            value={this.props.userPersonalSkillName}
-                                                            name="userSkillName"
-                                                            onChange={(value)=>{
-                                                            this.props.onUpdate('userPersonalSkillName', value);
+                                                    
+                                                        <input
+                                                            required
+                                                            type="text"
+                                                            className="form-control"
+                                                            value={this.props.userSkillPersonalName}
+                                                            name="userSkillPersonalName"
+                                                            onChange={(event)=>{
+                                                                this.props.onUpdate('userSkillPersonalName', event.target.value);
                                                             }}
-                                                            placeholder=""
                                                         />
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div className="col-5">
                                                 <div className="row mt-2">
@@ -583,15 +566,15 @@ class UserDataForm extends Component {
                                             <div className="row">               
                                                 <div className="col-5">
                                                     <div className="detailinfo">
-                                                        <Select
-                                                            className="jobSkilloptions"
-                                                            options={jobSkilloptions}
-                                                            value={this.props.userProfessionalSkillName}
-                                                            name="jobSkilloptions"
-                                                            onChange={(value)=>{
-                                                            this.props.onUpdate('userProfessionalSkillName', value);
+                                                        <input
+                                                            required
+                                                            className="form-control"
+                                                            type="text"
+                                                            value={userFormData.userSkillProfessionalName}
+                                                            id={'userSkillProfessionalName'}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
                                                             }}
-                                                            placeholder=""
                                                         />
                                                     </div>
                                                 </div>
