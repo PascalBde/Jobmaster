@@ -484,3 +484,23 @@ textarea {
     border-width: 3px !important;
     border-color: skyblue !important;
 }
+
+.skillInfo {
+    background: skyblue !important;
+    color: var(--maintextcolor);
+}
+
+.skillInfoHeader {
+    background: skyblue !important;
+}
+
+.examplestitle {
+    color: var(--maintextcolor);
+    font-size: 20px;
+    align-items: center;
+}
+
+.examplestitle:active {
+    border-width: 0px !important;
+    border-color: transparent !important;
+}

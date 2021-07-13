@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import Select from "react-select";
+import Accordion from 'react-bootstrap/Accordion';
+import { Button, Card } from "react-bootstrap";
 
 import SkillEntry from "./SkillEntry";
 
@@ -446,7 +448,6 @@ class UserDataForm extends Component {
                                         <section>
                                             <div className="row">               
                                                 <div className="col-5">
-                                                    
                                                         <input
                                                             required
                                                             type="text"
@@ -457,7 +458,6 @@ class UserDataForm extends Component {
                                                                 this.props.onUpdate('userSkillPersonalName', event.target.value);
                                                             }}
                                                         />
-                                                    
                                                 </div>
                                                 <div className="col-5">
                                                 <div className="row mt-2">
@@ -541,6 +541,36 @@ class UserDataForm extends Component {
                                                     </button>
                                                 </div>
                                             </div>
+                                            <Accordion>
+                                                <Card className="skillInfo">
+                                                    <Card.Header className="skillInfoHeader">
+                                                        <Accordion.Toggle as={Button} variant="link" eventKey="0" >
+                                                            <h2 className="examplestitle">Beispiele für Persönliche Fähigkeiten</h2>
+                                                        </Accordion.Toggle>
+                                                    </Card.Header>
+                                                        <Accordion.Collapse eventKey="0">
+                                                            <Card.Body>
+                                                                <p className="examplesText">
+                                                                    Typische bzw. häufig aufgeführte Fähigkeiten sind beispielsweise: 
+                                                                </p>
+                                                                    <ul> 
+                                                                    <li>Motivation</li> 
+                                                                    <li>Teamfähigkeit</li> 
+                                                                    <li>Zuverlässigkeit</li> 
+                                                                    <li>Genauigkeit/Sorgfalt</li> 
+                                                                    <li>Selbstständig</li> 
+                                                                    <li>Kommunikation</li> 
+                                                                    <li>Problemlösung</li> 
+                                                                    <li>Belastbarkeit</li> 
+                                                                    uvm.
+                                                                    </ul>
+                                                                <p>    
+                                                                Im Grunde geht es darum die eigenen stärksten Fähigkeiten hervorzuheben. Anhaltspunkte dazu findet man auch oft in der Stellenazeige selbst.
+                                                                </p>
+                                                            </Card.Body>
+                                                        </Accordion.Collapse>
+                                                </Card>
+                                            </Accordion>
                                         </section>
                                         <hr />
                                         <div className="row offset-4">
@@ -660,17 +690,50 @@ class UserDataForm extends Component {
                                                     </button>
                                                 </div>
                                             </div>
+                                            <Accordion>
+                                                <Card className="skillInfo">
+                                                    <Card.Header className="skillInfoHeader">
+                                                        <Accordion.Toggle as={Button} variant="link" eventKey="0" >
+                                                            <h2 className="examplestitle">Beispiele für Berufliche Fähigkeiten</h2>
+                                                        </Accordion.Toggle>
+                                                    </Card.Header>
+                                                        <Accordion.Collapse eventKey="0">
+                                                            <Card.Body>
+                                                                <p className="examplesText">
+                                                                    Die beruflichen Fähigkeiten beziehen sich logischerweise auf die Fähigkeiten die man in der Tätigkeit braucht und vorweisen kann. Hier drei Beispiele:
+                                                                </p>
+                                                                    <ul className="jobExamples">Programmierer:
+                                                                        <li>React</li>
+                                                                        <li>JavaScript</li>
+                                                                        <li>PHP</li>
+                                                                        <li>Laravel</li>                                                                    
+                                                                        <li>Git</li>
+                                                                        uvm.                                                              
+                                                                    </ul>
+                                                                    <ul className="jobExamples">Buchhalter:
+                                                                        <li>Kreditorenbuchhaltung</li>
+                                                                        <li>Debitorenbuchhaltung</li>
+                                                                        <li>Personalbuchhaltung</li>
+                                                                        <li>Bilanzbuchhaltung</li>
+                                                                        <li>SAP/Datev/Lexware</li>
+                                                                        uvm.
+                                                                    </ul>
+                                                                    <ul>Industriemechaniker:
+                                                                    <li>Maschinentechnik</li>
+                                                                    <li>Messen, Prüfen (Metalltechnik)</li>
+                                                                    <li>Wartung, Reparatur, Instandhaltung</li>
+                                                                    <li>CAD (Computer Aided Design)-Systeme anwenden</li>
+                                                                    <li>CNC-Kenntnisse, CNC-Programmieren</li>
+                                                                    uvm.
+                                                                    </ul>
+                                                                <p>   
+                                                                     Anhaltspunkte dazu findet man auch oft in der Stellenanzeige selbst.
+                                                                </p>
+                                                            </Card.Body>
+                                                        </Accordion.Collapse>
+                                                </Card>
+                                            </Accordion>
                                         </section>
-                                        <hr />
-                                        <div className="row offset-4">
-                                            <div className="col-12">
-                                            {professionalSkills.map((skill, index) => {
-                                                return(
-                                                    <SkillEntry skill={skill} skillIndex={index} deleteEntry={this.deleteProfessionalSkill}/>
-                                                );
-                                            })}
-                                            </div>
-                                        </div>
                                     </div>
                             </form>
                         </div>

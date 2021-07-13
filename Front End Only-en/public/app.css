@@ -483,3 +483,30 @@ textarea {
     font-size: 48px !important;
     font-weight: 600 !important;
 }
+
+.accordionArea {
+    background-color: #0d0368 !important;
+    border-radius: 10px !important;
+    border-width: 3px !important;
+    border-color: skyblue !important;
+}
+
+.skillInfo {
+    background: skyblue !important;
+    color: var(--maintextcolor);
+}
+
+.skillInfoHeader {
+    background: skyblue !important;
+}
+
+.examplestitle {
+    color: var(--maintextcolor);
+    font-size: 20px;
+    align-items: center;
+}
+
+.examplestitle:active {
+    border-width: 0px !important;
+    border-color: transparent !important;
+}

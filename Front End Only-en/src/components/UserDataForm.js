@@ -1,5 +1,8 @@
 import React, {Component} from "react";
 import Select from "react-select";
+import Accordion from 'react-bootstrap/Accordion';
+import { Button, Card } from "react-bootstrap";
+
 
 import SkillEntry from "./SkillEntry";
 
@@ -79,23 +82,6 @@ const bYears = [
         {value: "1980", label: "1980"}, {value: "1979", label: "1979"}, {value: "1978", label: "1978"}, {value: "1977", label: "1977"}, {value: "1976", label: "1976"},
         {value: "1975", label: "1975"}, {value: "1974", label: "1974"}, {value: "1972", label: "1972"}, {value: "1971", label: "1971"}, {value: "1970", label: "1970"},
 ]
-const personalSkilloptions = [
-    {value: "Accurate", label: "Accurate" }, 
-    {value: "Analysis", label: "Analysis"}, 
-    {value: "Resilience", label: "Resilience"}, 
-    {value: "Communicative", label: "Communicative"},
-    {value: "Willingness to learn", label: "Willingness to learn"},
-    {value: "Motivation", label: "Motivation"},
-    {value: "Troubleshooting", label: "Troubleshooting"},
-    {value: "Independently", label: "Independently"},
-    {value: "Diligence", label: "Diligence"},
-    {value: "Teamplayer", label: "Teamplayer"},
-    {value: "Reliability", label: "Reliability"}
-]
-const jobSkilloptions = [
-    {value: "React", label: "React"}, {value: "JavaScript", label: "JavaScript"}, {value: "HTML5", label: "HTML5"}, {value: "Responsive Webdesign", label: "Responsive Webdesign"}, {value: "Visual Studio Code", label: "Visual Studio Code"}, {value: "Debugging", label: "Debugging"}
-]
-
 class UserDataForm extends Component {
     constructor(props) {
         super(props)
@@ -463,15 +449,15 @@ class UserDataForm extends Component {
                                             <div className="row">               
                                                 <div className="col-5">
                                                     <div className="detailinfo">
-                                                        <Select
-                                                            className="personalSkilloptions"
-                                                            options={personalSkilloptions}
-                                                            value={this.props.userPersonalSkillName}
-                                                            name="userSkillName"
-                                                            onChange={(value)=>{
-                                                            this.props.onUpdate('userPersonalSkillName', value);
+                                                        <input
+                                                            required
+                                                            type="text"
+                                                            className="form-control"
+                                                            value={this.props.userSkillPersonalName}
+                                                            name="userSkillPersonalName"
+                                                            onChange={(event)=>{
+                                                                this.props.onUpdate('userSkillPersonalName', event.target.value);
                                                             }}
-                                                            placeholder=""
                                                         />
                                                     </div>
                                                 </div>
@@ -557,6 +543,36 @@ class UserDataForm extends Component {
                                                     </button>
                                                 </div>
                                             </div>
+                                            <Accordion>
+                                                <Card className="skillInfo">
+                                                    <Card.Header className="skillInfoHeader">
+                                                        <Accordion.Toggle as={Button} variant="link" eventKey="0" >
+                                                            <h2 className="examplestitle">Examples of personal skills</h2>
+                                                        </Accordion.Toggle>
+                                                    </Card.Header>
+                                                        <Accordion.Collapse eventKey="0">
+                                                            <Card.Body>
+                                                                <p className="examplesText">
+                                                                Typical or frequently listed skills are, for example: 
+                                                                </p>
+                                                                    <ul> 
+                                                                    <li>Motivation</li> 
+                                                                    <li>Teamwork</li> 
+                                                                    <li>Reliability</li> 
+                                                                    <li>Accuracy/Care</li> 
+                                                                    <li>Self-employed</li> 
+                                                                    <li>Communication</li> 
+                                                                    <li>Troubleshooting</li> 
+                                                                    <li>Resilience</li> 
+                                                                    and much more.
+                                                                    </ul>
+                                                                <p>    
+                                                                Basically, it's about highlighting your own strongest skills. You can often find clues about this in the job advertisement itself.
+                                                                </p>
+                                                            </Card.Body>
+                                                        </Accordion.Collapse>
+                                                </Card>
+                                            </Accordion>
                                         </section>
                                         <hr />
                                         <div className="row offset-4">
@@ -582,15 +598,15 @@ class UserDataForm extends Component {
                                             <div className="row">               
                                                 <div className="col-5">
                                                     <div className="detailinfo">
-                                                        <Select
-                                                            className="jobSkilloptions"
-                                                            options={jobSkilloptions}
-                                                            value={this.props.userProfessionalSkillName}
-                                                            name="jobSkilloptions"
-                                                            onChange={(value)=>{
-                                                            this.props.onUpdate('userProfessionalSkillName', value);
+                                                        <input
+                                                            required
+                                                            className="form-control"
+                                                            type="text"
+                                                            value={userFormData.userSkillProfessionalName}
+                                                            id={'userSkillProfessionalName'}
+                                                            onChange={(event)=>{
+                                                            this.props.onUpdate(event.target.id, event.target.value); 
                                                             }}
-                                                            placeholder=""
                                                         />
                                                     </div>
                                                 </div>
@@ -676,6 +692,49 @@ class UserDataForm extends Component {
                                                     </button>
                                                 </div>
                                             </div>
+                                            <Accordion>
+                                                <Card className="skillInfo">
+                                                    <Card.Header className="skillInfoHeader">
+                                                        <Accordion.Toggle as={Button} variant="link" eventKey="0" >
+                                                            <h2 className="examplestitle">Examples of professional skills</h2>
+                                                        </Accordion.Toggle>
+                                                    </Card.Header>
+                                                        <Accordion.Collapse eventKey="0">
+                                                            <Card.Body>
+                                                                <p className="examplesText">
+                                                                The professional skills relate logically to the skills that one needs and can demonstrate in the job. Here are three examples:
+                                                                </p>
+                                                                    <ul className="jobExamples">Programmer:
+                                                                        <li>React</li>
+                                                                        <li>JavaScript</li>
+                                                                        <li>PHP</li>
+                                                                        <li>Laravel</li>                                                                    
+                                                                        <li>Git</li>
+                                                                        and much more.                                                              
+                                                                    </ul>
+                                                                    <ul className="jobExamples">Accountant:
+                                                                        <li>Accounts Payable</li>
+                                                                        <li>Accounts Receivable</li>
+                                                                        <li>Payroll accounting</li>
+                                                                        <li>Balance sheet accounting</li>
+                                                                        <li>SAP/Datev/Lexware</li>
+                                                                        and much more.
+                                                                    </ul>
+                                                                    <ul>Industrial mechanic:
+                                                                    <li>Machine technology</li>
+                                                                    <li>Measuring, testing (metal technology)</li>
+                                                                    <li>Maintenance, repair</li>
+                                                                    <li>Apply CAD (Computer Aided Design) systems</li>
+                                                                    <li>CNC knowledge, CNC programming</li>
+                                                                    and much more.
+                                                                    </ul>
+                                                                <p>   
+                                                                You can often find clues about this in the job advertisement itself.
+                                                                </p>
+                                                            </Card.Body>
+                                                        </Accordion.Collapse>
+                                                </Card>
+                                            </Accordion>
                                         </section>
                                         <hr />
                                         <div className="row offset-4">
