@@ -592,7 +592,7 @@ class UserDataForm extends Component {
                                                             this.props.onUpdate(event.target.id, event.target.value); 
                                                             }}
                                                         />
-                                                        0
+                                                        1
                                                     </label>               
                                                 <div className="offset-1" />
                                                     <label>

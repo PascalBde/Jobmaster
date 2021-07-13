@@ -171,7 +171,7 @@ class AppControl extends Component {
                         <Tab>Anschreiben</Tab>
                         <Tab>Lebenslauf</Tab>
                         <Tab>Anlagen</Tab>
-                        <Tab>Übericht</Tab>
+                        <Tab>Übersicht</Tab>
                     </TabList>
                     <TabPanel>
                         <Start />
