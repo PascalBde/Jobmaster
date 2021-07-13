@@ -734,6 +734,16 @@ class UserDataForm extends Component {
                                                 </Card>
                                             </Accordion>
                                         </section>
+                                        <hr />
+                                        <div className="row offset-4">
+                                            <div className="col-12">
+                                            {professionalSkills.map((skill, index) => {
+                                                return(
+                                                    <SkillEntry skill={skill} skillIndex={index} deleteEntry={this.deleteProfessionalSkill}/>
+                                                );
+                                            })}
+                                            </div>
+                                        </div>
                                     </div>
                             </form>
                         </div>
