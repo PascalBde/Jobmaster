@@ -6,7 +6,7 @@ import LoadIcon from 'react-feather/dist/icons/upload-cloud';
 // import moment from 'moment';
 import 'moment/locale/de';
 
-import Start from "./Start";
+import Help from "./Start";
 import UserDataForm from "./UserDataForm";
 import Vita from "./Vita";
 import CoverLetter from "./CoverLetter";
@@ -163,16 +163,13 @@ class AppControl extends Component {
 
                 <Tabs>
                     <TabList>
-                        <Tab>Start</Tab>
                         <Tab>Applicant data</Tab>
                         <Tab>Cover Letter</Tab>
                         <Tab>Curricullum Vitae</Tab>
                         <Tab>Attachments</Tab>
                         <Tab>Overview</Tab>
+                        <Tab>Help</Tab>
                     </TabList>
-                    <TabPanel>
-                        <Start />
-                    </TabPanel>
                     <TabPanel>
                         <UserDataForm
                             data={this.state.final.userData}
@@ -203,6 +200,9 @@ class AppControl extends Component {
                     </TabPanel>
                     <TabPanel>
                         <Final data={this.state.final}/>
+                    </TabPanel>
+                    <TabPanel>
+                        <Help />
                     </TabPanel>
                 </Tabs>
             </div>
